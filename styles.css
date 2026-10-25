@@ -1,0 +1,105 @@
+:root {
+  --bg-canvas: #09090b;
+  --bg-card: #121215;
+  --border-subtle: #1f1f23;
+  --text-main: #f4f4f5;
+  
+  /* Accent bleu marine utilisé sur l'ensemble du portfolio */
+  --accent-color: #5c78b0;
+  --accent-glow: rgba(92, 120, 176, 0.16);
+  --highlight-text: #5c78b0;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  font-family: 'Geist', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grille identique à la capture : fond noir obsidienne, traits neutres ultra-subtils et masque radial */
+.bg-engineering-grid {
+  background-size: 52px 52px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 35%, transparent 95%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 35%, transparent 95%);
+}
+
+/* Titre éditorial */
+.editorial-headline {
+  letter-spacing: -0.038em;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+/* Labels monospace */
+.meta-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #888891;
+}
+
+.section-kicker {
+  color: #5c78b0;
+  font-size: 14px;
+}
+
+/* Halo feutré autour du portrait */
+.portrait-glow-wrapper {
+  position: relative;
+}
+
+.portrait-glow-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 32px;
+  background: radial-gradient(circle at 50% 50%, var(--accent-glow) 0%, rgba(9, 9, 11, 0.3) 60%, transparent 80%);
+  filter: blur(20px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.portrait-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  background-color: var(--bg-card);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.8);
+}
+
+/* Surlignage narratif */
+.narrative-highlight {
+  color: var(--highlight-text);
+  font-weight: 500;
+}
+
+/* Cartes Bento */
+.bento-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  transition: border-color 0.2s ease;
+}
+
+.bento-card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Badges technologiques */
+.tech-tag {
+  padding: 4px 10px;
+  border-radius: 8px;
+  background-color: #09090b;
+  border: 1px solid #1f1f23;
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  color: #d4d4d8;
+}
