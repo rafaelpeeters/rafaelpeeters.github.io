@@ -38,12 +38,30 @@
         <a href="#projects" class="hover:text-zinc-200 transition-colors" data-en="Projects">Projets</a>
         <a href="#contact" class="hover:text-zinc-200 transition-colors" data-en="Contact">Contact</a>
         <div class="flex items-center gap-1 rounded-md border border-[#292a32] p-0.5" role="group" aria-label="Language">
-          <button id="language-fr" type="button" lang="fr" aria-label="Français" aria-pressed="true" class="rounded px-2 py-1 bg-[#5c78b0] text-white transition-colors">FR</button>
-          <button id="language-en" type="button" lang="en" aria-label="English" aria-pressed="false" class="rounded px-2 py-1 bg-transparent text-zinc-500 hover:text-zinc-200 transition-colors">EN</button>
+          <button id="language-fr" type="button" lang="fr" aria-label="Français" aria-pressed="true" class="interactive-button language-button rounded px-2 py-1 bg-[#5c78b0] text-white">FR</button>
+          <button id="language-en" type="button" lang="en" aria-label="English" aria-pressed="false" class="interactive-button language-button rounded px-2 py-1 bg-transparent text-zinc-500">EN</button>
         </div>
       </nav>
     </div>
   </header>
+
+  <nav id="section-index" class="section-index" aria-label="Navigation des sections">
+    <div class="section-index-nav">
+      <span class="section-index-progress" aria-hidden="true"></span>
+      <a href="#about" aria-current="location">
+        <span class="section-index-marker" aria-hidden="true"></span>
+        <span class="section-index-label" data-en="About">À propos</span>
+      </a>
+      <a href="#projects">
+        <span class="section-index-marker" aria-hidden="true"></span>
+        <span class="section-index-label" data-en="Projects">Projets</span>
+      </a>
+      <a href="#contact">
+        <span class="section-index-marker" aria-hidden="true"></span>
+        <span class="section-index-label" data-en="Contact">Contact</span>
+      </a>
+    </div>
+  </nav>
 
   <!-- Contenu Principal -->
   <main class="page-enter relative z-10 max-w-6xl mx-auto px-6 pt-6 sm:pt-12 pb-32 space-y-20 sm:space-y-24">
@@ -129,15 +147,15 @@
           </div>
 
           <div class="flex flex-wrap items-center gap-4 pt-1 font-mono text-xs">
-            <a href="#projects" class="reveal-on-scroll inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-100 text-zinc-950 font-semibold hover:bg-white transition-all">
+            <a href="#projects" class="interactive-button reveal-on-scroll inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-100 text-zinc-950 font-semibold hover:bg-white transition-all">
               <span data-en="View projects">Voir les réalisations</span>
               <span>↓</span>
             </a>
-            <a href="#contact" class="reveal-on-scroll inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900 border border-[#141417] text-zinc-300 hover:border-zinc-700 hover:text-white transition-all">
+            <a href="#contact" class="interactive-button reveal-on-scroll inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900 border border-[#141417] text-zinc-300 hover:border-zinc-700 hover:text-white transition-all">
               <span data-en="Get in touch">Prendre contact</span>
               <span>→</span>
             </a>
-            <a href="images/cv.pdf" target="_blank" rel="noopener noreferrer" class="reveal-on-scroll inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900 border border-[#141417] text-zinc-300 hover:border-zinc-700 hover:text-white transition-all">
+            <a href="images/cv.pdf" target="_blank" rel="noopener noreferrer" class="interactive-button reveal-on-scroll inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900 border border-[#141417] text-zinc-300 hover:border-zinc-700 hover:text-white transition-all">
               <span data-en="View my CV">Consulter mon CV</span>
               <span>↗</span>
             </a>
@@ -359,6 +377,48 @@
 
         <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
 
+          <!-- Analyse de données de capteurs (C) -->
+          <article class="reveal-on-scroll space-y-4 group">
+            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
+              <img src="images/projet-capteurs.png" alt="Capture du projet d’analyse de données de capteurs" data-alt-en="Screenshot of the sensor data analysis project" class="block h-44 w-full object-cover" loading="lazy" />
+            </div>
+            <div class="space-y-1.5">
+              <div class="flex items-baseline justify-between">
+                <h3 class="text-base font-bold text-zinc-100" data-en="Sensor Data Analysis">Analyse de données de capteurs</h3>
+                <span class="font-mono text-xs text-zinc-500">2026</span>
+              </div>
+              <p class="font-mono text-xs text-zinc-400" data-en="C measurement analyzer and report generator">Analyseur de mesures et générateur de synthèse en C</p>
+            </div>
+          </article>
+
+          <!-- Éditeur interactif de graphes en C -->
+          <article class="reveal-on-scroll space-y-4 group">
+            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
+              <img src="images/projet-graphdesigner.png" alt="Capture de l’application d’édition de graphes" data-alt-en="Screenshot of the graph editing application" class="block h-44 w-full object-cover" loading="lazy" />
+            </div>
+            <div class="space-y-1.5">
+              <div class="flex items-baseline justify-between">
+                <h3 class="text-base font-bold text-zinc-100" data-en="Graph Editor">Éditeur de graphes</h3>
+                <span class="font-mono text-xs text-zinc-500">2026</span>
+              </div>
+              <p class="font-mono text-xs text-zinc-400" data-en="Interactive graph editing application in C3">Application interactive d’édition de graphes en C3</p>
+            </div>
+          </article>
+
+          <!-- Éditeur de blogue en Bash avec export HTML et PDF -->
+          <article class="reveal-on-scroll space-y-4 group">
+            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
+              <img src="images/projet-blogue.png" alt="Capture du projet d’éditeur de blogue" data-alt-en="Screenshot of the blog editor project" class="block h-44 w-full object-cover" loading="lazy" />
+            </div>
+            <div class="space-y-1.5">
+              <div class="flex items-baseline justify-between">
+                <h3 class="text-base font-bold text-zinc-100" data-en="Blog Editor">Éditeur de blogue</h3>
+                <span class="font-mono text-xs text-zinc-500">2025</span>
+              </div>
+              <p class="font-mono text-xs text-zinc-400" data-en="Bash blog editor with HTML and PDF export">Blogue en Bash, export en HTML et PDF</p>
+            </div>
+          </article>
+
           <!-- Nouveau Projet : Jeu de Labyrinthe 2D (Java / POO) -->
           <article class="reveal-on-scroll space-y-4 group">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
@@ -401,8 +461,8 @@
             </div>
           </article>
 
-          <!-- Carte 03 (Dévoilée au clic) : Simulation de Station Domotique (Java / JUnit) -->
-          <article class="extra-project hidden space-y-4 group">
+          <!-- Carte 03 : Simulation de Station Domotique (Java / JUnit) -->
+          <article class="reveal-on-scroll space-y-4 group">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-odomo.png" alt="Capture du projet de station domotique" data-alt-en="Screenshot of the smart home station project" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
@@ -415,8 +475,8 @@
             </div>
           </article>
 
-          <!-- Carte 04 (Dévoilée au clic) : Musicalertes (SQL / MCD) -->
-          <article class="extra-project hidden space-y-4 group">
+          <!-- Carte 04 : Musicalertes (SQL / MCD) -->
+          <article class="reveal-on-scroll space-y-4 group">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-bd.png" alt="Capture du projet de base de données Musicalertes" data-alt-en="Screenshot of the Musicalertes database project" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
@@ -429,8 +489,8 @@
             </div>
           </article>
 
-          <!-- Carte 05 (Dévoilée au clic) : Retro-PC Dépannage (HTML5 / CSS3) -->
-          <article class="extra-project hidden space-y-4 group">
+          <!-- Carte 05 : Retro-PC Dépannage (HTML5 / CSS3) -->
+          <article class="reveal-on-scroll space-y-4 group">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-web.png" alt="Capture du site Retro-PC Dépannage" data-alt-en="Screenshot of the Retro-PC Repair website" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
@@ -443,8 +503,8 @@
             </div>
           </article>
 
-          <!-- Carte 06 (Dévoilée au clic) : Machine Virtuelle Debian / Clojure -->
-          <article class="extra-project hidden space-y-4 group">
+          <!-- Carte 06 : Machine Virtuelle Debian / Clojure -->
+          <article class="reveal-on-scroll space-y-4 group">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-vm.png" alt="Capture du projet de machine virtuelle Debian" data-alt-en="Screenshot of the Debian virtual machine project" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
@@ -459,17 +519,6 @@
 
         </div>
 
-        <!-- Bouton pour déplier la grille -->
-        <div class="pt-4 flex justify-center">
-          <button
-            id="toggle-projects-btn"
-            type="button"
-            class="px-6 py-2.5 rounded-xl bg-zinc-100 text-zinc-950 font-semibold hover:bg-white text-xs font-mono transition-all flex items-center gap-2"
-          >
-            <span id="toggle-projects-text" data-en="Show more projects">Afficher plus de projets</span>
-            <span id="toggle-projects-icon">↓</span>
-          </button>
-        </div>
       </div>
 
     </section>
@@ -596,7 +645,7 @@
               <button 
                 type="submit" 
                 id="send-btn"
-                class="px-5 py-2.5 rounded-xl bg-[#141418] border border-[#2a2a32] hover:border-zinc-600 text-sm font-medium text-zinc-200 hover:text-white transition-colors inline-flex items-center gap-2 group"
+                class="interactive-button px-5 py-2.5 rounded-xl bg-[#141418] border border-[#2a2a32] hover:border-zinc-600 text-xs font-mono font-medium text-zinc-200 hover:text-white transition-colors inline-flex items-center gap-2 group"
               >
                 <span id="send-btn-text" data-en="Send message">Envoyer le message</span>
                 <span class="text-zinc-400 group-hover:translate-x-0.5 transition-transform">→</span>
