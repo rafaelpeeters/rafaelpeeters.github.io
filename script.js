@@ -11,7 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const sectionIndex = document.getElementById('section-index');
   const sectionLinks = sectionIndex?.querySelectorAll('a[href^="#"]') ?? [];
   const sections = Array.from(sectionLinks, (link) => document.querySelector(link.getAttribute('href')));
-  const contactForm = document.getElementById('contact-form');
+  const contactLinks = document.getElementById('contact-links');
+  const showMoreProjectsButton = document.getElementById('show-more-projects');
+  const showMoreProjectsLabel = document.getElementById('show-more-projects-label');
+  const showLessProjectsLabel = document.getElementById('show-less-projects-label');
+  const showProjectsIcon = document.getElementById('show-projects-icon');
+  const hiddenProjectCards = document.querySelectorAll('#projects-grid article[hidden]');
 
   translatableElements.forEach((element) => {
     element.dataset.fr = element.innerHTML;
@@ -36,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentLanguage = language;
     document.documentElement.lang = language;
     sectionIndex?.setAttribute('aria-label', language === 'en' ? 'Section navigation' : 'Navigation des sections');
+    contactLinks?.setAttribute('aria-label', language === 'en' ? 'Contact links' : 'Liens de contact');
 
     translatableElements.forEach((element) => {
       element.innerHTML = language === 'en' ? element.dataset.en : element.dataset.fr;
@@ -45,9 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.title = 'Rafael Peeters — Portfolio';
-    document.querySelector('meta[name="description"]').content = language === 'en'
-      ? 'Software engineering and systems portfolio.'
-      : "Portfolio d'ingénierie logicielle et systèmes.";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.content = language === 'en'
+        ? 'Software engineering and systems portfolio.'
+        : "Portfolio d'ingénierie logicielle et systèmes.";
+    }
 
     Object.entries(languageButtons).forEach(([buttonLanguage, button]) => {
       if (!button) return;
@@ -60,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       button.classList.toggle('hover:bg-zinc-800', !isActive);
       button.classList.toggle('hover:text-zinc-100', !isActive);
     });
+
     animatePageTitles();
   };
 
@@ -119,6 +129,48 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateSectionIndex);
   }
 
+  showMoreProjectsButton?.addEventListener('click', async () => {
+    const showAllProjects = showMoreProjectsButton.getAttribute('aria-expanded') !== 'true';
+    showMoreProjectsButton.disabled = true;
+    if (showAllProjects) {
+      hiddenProjectCards.forEach((card, index) => {
+        card.hidden = false;
+        card.classList.remove('project-card-exit');
+        card.style.setProperty('--project-reveal-delay', `${index * 100}ms`);
+        card.classList.add('is-visible', 'project-card-enter');
+      });
+    } else if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      hiddenProjectCards.forEach((card) => {
+        card.hidden = true;
+        card.classList.remove('is-visible', 'project-card-enter', 'project-card-exit');
+      });
+    } else {
+      const exitAnimations = Array.from(hiddenProjectCards, (card) => new Promise((resolve) => {
+        card.addEventListener('animationend', resolve, { once: true });
+        card.classList.remove('project-card-enter');
+        card.style.setProperty('--project-reveal-delay', '0ms');
+        card.classList.add('project-card-exit');
+      }));
+      await Promise.all(exitAnimations);
+      hiddenProjectCards.forEach((card) => {
+        card.hidden = true;
+        card.classList.remove('is-visible', 'project-card-exit');
+        card.style.removeProperty('--project-reveal-delay');
+      });
+    }
+
+    hiddenProjectCards.forEach((card) => {
+      if (showAllProjects) card.classList.remove('project-card-exit');
+      else card.style.removeProperty('--project-reveal-delay');
+    });
+    showMoreProjectsButton.setAttribute('aria-expanded', String(showAllProjects));
+    if (showMoreProjectsLabel) showMoreProjectsLabel.hidden = showAllProjects;
+    if (showLessProjectsLabel) showLessProjectsLabel.hidden = !showAllProjects;
+    if (showProjectsIcon) showProjectsIcon.textContent = showAllProjects ? '↑' : '↓';
+    showMoreProjectsButton.disabled = false;
+    updateSectionIndex();
+  });
+
   const revealItems = document.querySelectorAll('.reveal-on-scroll');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -149,40 +201,4 @@ document.addEventListener('DOMContentLoaded', () => {
     revealItems.forEach((item) => revealObserver.observe(item));
     document.body.classList.add('motion-ready');
   }
-
-  contactForm?.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const btnText = document.getElementById('send-btn-text');
-    const name = document.getElementById('form-name')?.value ?? '';
-
-    if (btnText) btnText.textContent = currentLanguage === 'en' ? 'Sending...' : 'Envoi en cours...';
-
-    setTimeout(() => {
-      if (btnText) btnText.textContent = currentLanguage === 'en' ? 'Message sent ✓' : 'Message envoyé ✓';
-      showToast(currentLanguage === 'en'
-        ? `Thank you ${name}, your message has been sent!`
-        : `Merci ${name}, votre message a bien été transmis !`);
-      contactForm.reset();
-
-      setTimeout(() => {
-        if (btnText) btnText.textContent = currentLanguage === 'en' ? 'Send message' : 'Envoyer le message';
-      }, 3000);
-    }, 500);
-  });
 });
-
-function showToast(message) {
-  const toast = document.getElementById('toast');
-  const toastText = document.getElementById('toast-text');
-  if (!toast || !toastText) return;
-
-  toastText.textContent = message;
-  toast.classList.remove('hidden');
-  toast.classList.add('flex');
-
-  clearTimeout(window._toastTimer);
-  window._toastTimer = setTimeout(() => {
-    toast.classList.add('hidden');
-    toast.classList.remove('flex');
-  }, 3000);
-}

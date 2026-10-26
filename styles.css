@@ -3,11 +3,9 @@
   --bg-card: #121215;
   --border-subtle: #1f1f23;
   --text-main: #f4f4f5;
-  
-  /* Accent bleu marine utilisé sur l'ensemble du portfolio */
+
   --accent-color: #5c78b0;
   --accent-glow: rgba(92, 120, 176, 0.16);
-  --highlight-text: #5c78b0;
 }
 
 body {
@@ -18,24 +16,21 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Grille identique à la capture : fond noir obsidienne, traits neutres ultra-subtils et masque radial */
 .bg-engineering-grid {
   background-size: 52px 52px;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
   mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 35%, transparent 95%);
   -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 35%, transparent 95%);
 }
 
-/* Titre éditorial */
 .editorial-headline {
   letter-spacing: -0.038em;
   line-height: 1.1;
   font-weight: 700;
 }
 
-/* Labels monospace */
 .meta-label {
   font-family: 'Geist Mono', monospace;
   font-size: 11px;
@@ -45,7 +40,7 @@ body {
 }
 
 .section-kicker {
-  color: #5c78b0;
+  color: var(--accent-color);
   font-size: 14px;
 }
 
@@ -126,8 +121,7 @@ body {
 }
 
 .section-index-nav a:hover,
-.section-index-nav a:focus-visible,
-.section-index-nav a[aria-current="location"] {
+.section-index-nav a:focus-visible {
   color: var(--text-main);
 }
 
@@ -180,12 +174,6 @@ body {
   transition: translate 200ms ease, filter 200ms ease, box-shadow 200ms ease;
 }
 
-#about .interactive-button:hover {
-  filter: brightness(1.1);
-  translate: 0 -2px;
-  box-shadow: 0 6px 18px -10px rgba(92, 120, 176, 0.55);
-}
-
 .interactive-button:active {
   translate: 0 0;
 }
@@ -202,13 +190,23 @@ body {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .project-card-enter {
+    animation: content-appear 550ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: var(--project-reveal-delay, 0ms);
+  }
+
+  .project-card-exit {
+    animation: content-disappear 250ms cubic-bezier(0.4, 0, 1, 1) both;
+    animation-delay: var(--project-reveal-delay, 0ms);
+  }
+
   .page-enter .page-load-reveal {
     animation: content-appear 550ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
     animation-delay: var(--reveal-delay, 0ms);
   }
 
   .page-enter .language-title-reveal {
-    animation: language-title-appear 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation: content-appear 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
     animation-delay: var(--title-reveal-delay, 0ms);
   }
 
@@ -234,18 +232,13 @@ body {
   }
 }
 
-@keyframes language-title-appear {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
+@keyframes content-disappear {
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 0;
+    transform: translateY(-10px);
   }
 }
 
-/* Halo feutré autour du portrait */
 .portrait-glow-wrapper {
   position: relative;
 }
@@ -271,18 +264,26 @@ body {
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.8);
 }
 
-/* Surlignage narratif */
 .narrative-highlight {
-  color: var(--highlight-text);
+  color: var(--accent-color);
   font-weight: 500;
 }
 
-/* Cartes Bento */
 .bento-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: 20px;
   transition: border-color 0.2s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#projects-grid article[data-project-id] {
+  background-color: #111113;
+  border-color: #292a32;
+}
+
+#projects-grid article[data-project-id] .bento-card {
+  background-color: #111113;
+  border-color: #292a32;
 }
 
 .bento-card:hover {
@@ -313,7 +314,6 @@ body {
   }
 }
 
-/* Badges technologiques */
 .tech-tag {
   padding: 4px 10px;
   border-radius: 8px;

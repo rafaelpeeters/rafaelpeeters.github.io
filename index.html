@@ -6,23 +6,20 @@
   <title>Rafael Peeters — Portfolio</title>
   <meta name="description" content="Portfolio d'ingénierie logicielle et systèmes." />
 
-  <!-- Polices Geist & Geist Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
   <script src="tailwind.config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="relative min-h-screen selection:bg-[#5c78b0]/30 selection:text-[#5c78b0]">
 
-  <!-- Grille d'arrière-plan sobre -->
   <div class="fixed inset-0 bg-engineering-grid pointer-events-none z-0"></div>
 
-  <!-- En-tête -->
   <header class="sticky top-0 z-40 backdrop-blur-md bg-[#000000]/85 border-b border-[#292a32]">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
@@ -63,30 +60,26 @@
     </div>
   </nav>
 
-  <!-- Contenu Principal -->
-  <main class="page-enter relative z-10 max-w-6xl mx-auto px-6 pt-6 sm:pt-12 pb-32 space-y-20 sm:space-y-24">
+  <main class="page-enter relative z-10 max-w-6xl mx-auto px-6 pt-6 sm:pt-12 pb-40 space-y-20 sm:space-y-24">
 
-    <!-- 1. HERO / ABOUT -->
     <section id="about" class="scroll-mt-24">
       <h1 class="reveal-on-scroll editorial-headline text-2xl sm:text-3xl lg:text-[34px] uppercase text-zinc-100 mb-0">
-        Rafael Peeters 
+        Rafael Peeters
       </h1>
       <div class="reveal-on-scroll border-b border-[#292a32] pb-5 mb-8"></div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-        
-        <!-- Colonne gauche : Photo & Métadonnées -->
+
         <div class="lg:col-span-5 space-y-7">
           <div class="reveal-on-scroll portrait-glow-wrapper w-full max-w-[380px]">
             <div class="portrait-card aspect-[4/5] w-full">
-              <img 
-                src="images/rafael.png" 
-                alt="Rafael Peeters" 
-                class="w-full h-full object-cover object-center contrast-[1.05] brightness-95" 
+              <img
+                src="images/rafael.png"
+                alt="Rafael Peeters"
+                class="w-full h-full object-cover object-center contrast-[1.05] brightness-95"
               />
             </div>
           </div>
 
-          <!-- Métadonnées sous la photo -->
           <div class="space-y-4 max-w-[380px] pt-2 text-sm font-mono">
             <div class="reveal-on-scroll flex items-start justify-between gap-4 border-t border-[#292a32] pt-3.5">
               <span class="meta-label shrink-0 text-[#5c78b0]" data-en="Currently">Actuellement</span>
@@ -102,10 +95,10 @@
 
             <div class="reveal-on-scroll flex items-start justify-between gap-4 border-t border-[#292a32] pt-3.5">
               <span class="meta-label shrink-0 text-[#5c78b0]">Github</span>
-              <a 
-                href="https://github.com/rafaelpeeters" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://github.com/rafaelpeeters"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-zinc-300 hover:text-[#5c78b0] transition-colors flex items-center gap-1 group text-right"
               >
                 <span>github.com/rafaelpeeters</span>
@@ -115,10 +108,10 @@
 
             <div class="reveal-on-scroll flex items-start justify-between gap-4 border-t border-[#292a32] pt-3.5">
               <span class="meta-label shrink-0 text-[#5c78b0]">LinkedIn</span>
-              <a 
-                href="https://linkedin.com/in/rafael-peeters" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://linkedin.com/in/rafael-peeters"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-zinc-300 hover:text-[#5c78b0] transition-colors flex items-center gap-1 group text-right"
               >
                 <span>linkedin.com/in/rafael-peeters</span>
@@ -128,7 +121,6 @@
           </div>
         </div>
 
-        <!-- Colonne droite : Titre, Description, Boutons & Compétences -->
         <div class="lg:col-span-7 space-y-6">
           <div class="space-y-4 text-sm sm:text-base text-zinc-400 leading-relaxed font-normal">
             <p class="reveal-on-scroll">
@@ -161,7 +153,6 @@
             </a>
           </div>
 
-          <!-- Matrice des compétences -->
           <div class="pt-5 border-t border-[#292a32] space-y-3">
             <div class="reveal-on-scroll meta-label section-kicker font-medium" data-en="// TECHNICAL SKILLS">// COMPÉTENCES TECHNIQUES</div>
 
@@ -245,10 +236,8 @@
       </div>
     </section>
 
-    <!-- 2. PROJETS -->
     <section id="projects" class="scroll-mt-24 space-y-8">
-      
-      <!-- EN-TÊTE DE SECTION -->
+
       <div class="reveal-on-scroll flex items-center justify-between border-b border-[#292a32] pb-5">
         <div>
           <h2 class="editorial-headline text-2xl sm:text-3xl text-zinc-100" data-en="Projects">
@@ -257,13 +246,11 @@
         </div>
       </div>
 
-      <!-- 3 PROJETS PHARES ISSUS DES RETEX -->
       <div class="space-y-12">
         <div class="space-y-4">
           <div class="reveal-on-scroll meta-label section-kicker" data-en="// FEATURED PROJECTS">// Projets phares</div>
 
-          <!-- PROJET PHARE 1 : Visualisation de données en C# -->
-          <article class="reveal-on-scroll grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group">
+          <article data-project-id="meteo" class="reveal-on-scroll grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group">
             <div class="lg:col-span-6 bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-meteo.png" alt="Capture de l'application de visualisation des données météorologiques" data-alt-en="Screenshot of the weather data visualization application" class="block w-full aspect-[2/1] object-cover" loading="lazy" />
             </div>
@@ -278,7 +265,7 @@
                 </span>
               </div>
 
-              <h3 class="text-2xl font-bold text-zinc-100" data-en="Weather Data Visualization">Visualisation de Données Météorologiques</h3>
+              <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Weather Data Visualization">Visualisation de Données Météorologiques</h3>
               <p class="font-mono text-xs text-zinc-400" data-en="Interactive C# application & relational database">Application interactive C# & base de données relationnelle</p>
 
               <p class="text-sm text-zinc-400 leading-relaxed">
@@ -297,8 +284,7 @@
           </article>
         </div>
 
-        <!-- PROJET PHARE 2 : Coloration de Graphes en Java -->
-        <article class="reveal-on-scroll grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group">
+        <article data-project-id="graphes" class="reveal-on-scroll grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group">
           <div class="lg:col-span-6 bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
             <img src="images/projet-graphes.png" alt="Capture du projet de coloration de graphes planaires" data-alt-en="Screenshot of the planar graph coloring project" class="block w-full aspect-[2/1] object-cover" loading="lazy" />
           </div>
@@ -313,7 +299,7 @@
               </span>
             </div>
 
-            <h3 class="text-2xl font-bold text-zinc-100" data-en="Planar Graph Coloring">Coloration de Graphes Planaires</h3>
+            <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Planar Graph Coloring">Coloration de Graphes Planaires</h3>
             <p class="font-mono text-xs text-zinc-400" data-en="Data structures & optimization heuristics in Java">Structures de données & heuristiques d'optimisation en Java</p>
 
             <p class="text-sm text-zinc-400 leading-relaxed">
@@ -331,8 +317,7 @@
           </div>
         </article>
 
-        <!-- PROJET PHARE 3 : Installation de Services Réseaux sous Linux -->
-        <article class="reveal-on-scroll grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group">
+        <article data-project-id="nextcloud" class="reveal-on-scroll grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group">
           <div class="lg:col-span-6 bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
             <img src="images/projet-nextcloud.png" alt="Capture de l'installation réseau et du serveur Nextcloud" data-alt-en="Screenshot of the network and Nextcloud server setup" class="block w-full aspect-[2/1] object-cover" loading="lazy" />
           </div>
@@ -347,7 +332,7 @@
               </span>
             </div>
 
-            <h3 class="text-2xl font-bold text-zinc-100" data-en="Network Deployment & Nextcloud Server">Déploiement Réseau & Serveur Nextcloud</h3>
+            <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Network Deployment & Nextcloud Server">Déploiement Réseau & Serveur Nextcloud</h3>
             <p class="font-mono text-xs text-zinc-400" data-en="Addressing, virtual routing, and security configuration on Debian">Configuration d'adressage, routage virtuel et sécurisation sous Debian</p>
 
             <p class="text-sm text-zinc-400 leading-relaxed">
@@ -367,9 +352,6 @@
 
       </div>
 
-      <!-- ================================================================= -->
-      <!-- GRILLE DES AUTRES PROJETS (TOUS ISSUS DU DOSSIER RETEX)          -->
-      <!-- ================================================================= -->
       <div class="pt-8 border-t border-[#292a32] space-y-6">
         <div class="flex items-center justify-between">
           <div class="reveal-on-scroll meta-label section-kicker" data-en="// OTHER PROJECTS">// AUTRES RÉALISATIONS</div>
@@ -377,167 +359,217 @@
 
         <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
 
-          <!-- Analyse de données de capteurs (C) -->
-          <article class="reveal-on-scroll space-y-4 group">
+          <article data-project-id="capteurs" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-capteurs.png" alt="Capture du projet d’analyse de données de capteurs" data-alt-en="Screenshot of the sensor data analysis project" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
             <div class="space-y-1.5">
               <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100" data-en="Sensor Data Analysis">Analyse de données de capteurs</h3>
+                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Sensor Data Analysis">Analyse de données de capteurs</h3>
                 <span class="font-mono text-xs text-zinc-500">2026</span>
               </div>
               <p class="font-mono text-xs text-zinc-400" data-en="C measurement analyzer and report generator">Analyseur de mesures et générateur de synthèse en C</p>
+              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="Analyze sensor measurements and generate a summary in C.">Analyser des mesures de capteurs et générer une synthèse en C.</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p>C</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
+              </div>
             </div>
           </article>
 
-          <!-- Éditeur interactif de graphes en C -->
-          <article class="reveal-on-scroll space-y-4 group">
+          <article data-project-id="graphdesigner" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-graphdesigner.png" alt="Capture de l’application d’édition de graphes" data-alt-en="Screenshot of the graph editing application" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
             <div class="space-y-1.5">
               <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100" data-en="Graph Editor">Éditeur de graphes</h3>
+                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Graph Editor">Éditeur de graphes</h3>
                 <span class="font-mono text-xs text-zinc-500">2026</span>
               </div>
               <p class="font-mono text-xs text-zinc-400" data-en="Interactive graph editing application in C3">Application interactive d’édition de graphes en C3</p>
+              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="Create an interactive graph editing application in C3.">Créer une application interactive d’édition de graphes en C3.</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p>C3</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
+              </div>
             </div>
           </article>
 
-          <!-- Éditeur de blogue en Bash avec export HTML et PDF -->
-          <article class="reveal-on-scroll space-y-4 group">
+          <article data-project-id="blogue" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-blogue.png" alt="Capture du projet d’éditeur de blogue" data-alt-en="Screenshot of the blog editor project" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
             <div class="space-y-1.5">
               <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100" data-en="Blog Editor">Éditeur de blogue</h3>
+                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Blog Editor">Éditeur de blogue</h3>
                 <span class="font-mono text-xs text-zinc-500">2025</span>
               </div>
               <p class="font-mono text-xs text-zinc-400" data-en="Bash blog editor with HTML and PDF export">Blogue en Bash, export en HTML et PDF</p>
+              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="Build a blog editor in Bash with HTML and PDF export.">Créer un éditeur de blogue en Bash avec export HTML et PDF.</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p>Bash, HTML, PDF</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
+              </div>
             </div>
           </article>
 
-          <!-- Guerre des Pixels : adaptation inter-IUT de r/place -->
-          <article class="reveal-on-scroll space-y-4 group">
+          <article data-project-id="pixelwar" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-pixelwar.jpeg" alt="Capture du projet Guerre des Pixels" data-alt-en="Screenshot of the Pixel War project" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
             <div class="space-y-1.5">
               <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100" data-en="Pixel War">Guerre des Pixels</h3>
+                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Pixel War">Guerre des Pixels</h3>
                 <span class="font-mono text-xs text-zinc-500">2026</span>
               </div>
               <p class="font-mono text-xs text-zinc-400" data-en="Inter-IUT adaptation of r/place in JavaScript">Adaptation inter-IUT de r/place en JavaScript</p>
+              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="Create an inter-IUT adaptation of r/place in JavaScript.">Créer une adaptation inter-IUT de r/place en JavaScript.</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p>JavaScript</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
+              </div>
             </div>
           </article>
 
-          <!-- Nouveau Projet : Jeu de Labyrinthe 2D (Java / POO) -->
-          <article class="reveal-on-scroll space-y-4 group">
+          <article data-project-id="labyrinthe" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-labyrinthe.png" alt="Capture du jeu de labyrinthe 2D multi-niveaux en Java" data-alt-en="Screenshot of the multi-level 2D Java maze game" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
             <div class="space-y-1.5">
               <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100" data-en="2D Maze Game">Jeu de Labyrinthe 2D</h3>
+                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="2D Maze Game">Jeu de Labyrinthe 2D</h3>
                 <span class="font-mono text-xs text-zinc-500">2026</span>
               </div>
               <p class="font-mono text-xs text-zinc-400" data-en="Java grid-based game: monster AI & Manhattan lighting">Jeu sur grille en Java : IA des monstres & éclairage Manhattan</p>
+              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
+              </div>
             </div>
           </article>
 
-          <!-- Carte 01 : Les Mystères de Butopia (C# / NUnit / IHM) -->
-          <article class="reveal-on-scroll space-y-4 group">
+          <article data-project-id="butopia" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-butopia.png" alt="Capture du projet Les Mystères de Butopia" data-alt-en="Screenshot of The Mysteries of Butopia project" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
             <div class="space-y-1.5">
               <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100" data-en="The Mysteries of Butopia">Les Mystères de Butopia</h3>
+                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="The Mysteries of Butopia">Les Mystères de Butopia</h3>
                 <span class="font-mono text-xs text-zinc-500">2025</span>
               </div>
               <p class="font-mono text-xs text-zinc-400" data-en="Interactive C# application & UML design">Application interactive C# & conception UML</p>
+              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
+              </div>
             </div>
           </article>
 
-          <!-- Carte 02 : Implémentation de Jeu de Plateau & IA (Java / JUnit) -->
-          <article class="reveal-on-scroll space-y-4 group">
+          <article data-project-id="biosphere" hidden class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-biosphere.png" alt="Capture du projet de jeu de plateau et d’intelligence artificielle" data-alt-en="Screenshot of the board game and AI project" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
             <div class="space-y-1.5">
               <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100" data-en="Board Game & AI">Jeu de Plateau & IA</h3>
+                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Board Game & AI">Jeu de Plateau & IA</h3>
                 <span class="font-mono text-xs text-zinc-500">2025</span>
               </div>
               <p class="font-mono text-xs text-zinc-400" data-en="Turn-based logic & AI engines in Java">Logique tour par tour & moteurs d'IA en Java</p>
+              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
+              </div>
             </div>
           </article>
 
-          <!-- Carte 03 : Simulation de Station Domotique (Java / JUnit) -->
-          <article class="reveal-on-scroll space-y-4 group">
+          <article data-project-id="odomo" hidden class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-odomo.png" alt="Capture du projet de station domotique" data-alt-en="Screenshot of the smart home station project" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
             <div class="space-y-1.5">
               <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100" data-en="Smart Home Station">Station Domotique</h3>
+                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Smart Home Station">Station Domotique</h3>
                 <span class="font-mono text-xs text-zinc-500">2024</span>
               </div>
               <p class="font-mono text-xs text-zinc-400" data-en="Code familiarization & Java weather station">Appropriation de code & centrale météo Java</p>
+              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
+              </div>
             </div>
           </article>
 
-          <!-- Carte 04 : Musicalertes (SQL / MCD) -->
-          <article class="reveal-on-scroll space-y-4 group">
+          <article data-project-id="bd" hidden class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-bd.png" alt="Capture du projet de base de données Musicalertes" data-alt-en="Screenshot of the Musicalertes database project" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
             <div class="space-y-1.5">
               <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100" data-en="Musicalertes Database">Base de Données Musicalertes</h3>
+                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Musicalertes Database">Base de Données Musicalertes</h3>
                 <span class="font-mono text-xs text-zinc-500">2026</span>
               </div>
               <p class="font-mono text-xs text-zinc-400" data-en="Win'Design ER modeling & SQL queries">Modélisation MCD Win'Design & requêtes SQL</p>
+              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
+              </div>
             </div>
           </article>
 
-          <!-- Carte 05 : Retro-PC Dépannage (HTML5 / CSS3) -->
-          <article class="reveal-on-scroll space-y-4 group">
+          <article data-project-id="web" hidden class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-web.png" alt="Capture du site Retro-PC Dépannage" data-alt-en="Screenshot of the Retro-PC Repair website" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
             <div class="space-y-1.5">
               <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100" data-en="Retro-PC Repair">Retro-PC Dépannage</h3>
+                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Retro-PC Repair">Retro-PC Dépannage</h3>
                 <span class="font-mono text-xs text-zinc-500">2025</span>
               </div>
               <p class="font-mono text-xs text-zinc-400" data-en="Complete restructuring & CSS design system">Restructuration intégrale & design system CSS</p>
+              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
+              </div>
             </div>
           </article>
 
-          <!-- Carte 06 : Machine Virtuelle Debian / Clojure -->
-          <article class="reveal-on-scroll space-y-4 group">
+          <article data-project-id="vm" hidden class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
             <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
               <img src="images/projet-vm.png" alt="Capture du projet de machine virtuelle Debian" data-alt-en="Screenshot of the Debian virtual machine project" class="block h-44 w-full object-cover" loading="lazy" />
             </div>
             <div class="space-y-1.5">
               <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100" data-en="Debian Virtual Machine">Machine Virtuelle Debian</h3>
+                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Debian Virtual Machine">Machine Virtuelle Debian</h3>
                 <span class="font-mono text-xs text-zinc-500">2025</span>
               </div>
               <p class="font-mono text-xs text-zinc-400" data-en="Secure and reproducible Clojure environment">Environnement Clojure sécurisé & reproductible</p>
+              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
+                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
+              </div>
             </div>
           </article>
 
+        </div>
+        <div id="show-more-projects-container" class="pt-2 text-center">
+          <button id="show-more-projects" type="button" aria-expanded="false" class="interactive-button inline-flex items-center gap-2 rounded-xl border border-[#141417] bg-zinc-900 px-5 py-2.5 font-mono text-xs font-medium text-zinc-300 transition-all hover:border-zinc-700 hover:text-white">
+            <span id="show-more-projects-label" data-en="Show more projects">Voir plus de projets</span>
+            <span id="show-less-projects-label" data-en="Show fewer projects" hidden>Voir moins de projets</span>
+            <span id="show-projects-icon" aria-hidden="true">↓</span>
+          </button>
         </div>
 
       </div>
 
     </section>
 
-    <!-- 3. CONTACT -->
     <section id="contact" class="scroll-mt-24 pt-6">
       <div class="reveal-on-scroll border-b border-[#292a32] pb-5 mb-8">
         <h2 class="editorial-headline text-2xl sm:text-3xl text-zinc-100">
@@ -545,140 +577,63 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-        
-        <!-- COLONNE GAUCHE : Accroche & Coordonnées -->
-        <div class="lg:col-span-5 space-y-8">
-          <p class="reveal-on-scroll text-base sm:text-lg text-zinc-300 leading-relaxed font-normal">
-            <span data-en="I am open to opportunities in computer science and new challenges. Feel free to contact me here.">Je suis à l’écoute d’opportunités en informatique. Vous pouvez me contacter directement ici.</span>
+      <div class="reveal-on-scroll mr-auto max-w-4xl pt-1 pb-8 sm:pt-2 sm:pb-12 text-left">
+        <p class="max-w-4xl text-base sm:text-lg text-zinc-300 leading-relaxed" data-en="I am open to opportunities in computer science and new challenges. Feel free to contact me here if you have an internship or work placement to offer, or simply have any questions.">
+          Je suis à l’écoute d’opportunités en informatique. Vous pouvez me contacter directement ici si vous avez une alternance ou un stage à me proposer, ou simplement des questions à me poser.
+        </p>
+
+        <div class="mt-5">
+          <p class="inline-flex items-center gap-2 break-all text-lg sm:text-xl font-medium text-zinc-100">
+            <svg class="h-4 w-4 shrink-0 text-[#5c78b0]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span>rafaelpeeters33@gmail.com</span>
           </p>
-
-          <div class="space-y-4 pt-2">
-            <!-- Email avec icône enveloppe -->
-            <a class="reveal-on-scroll"
-              href="mailto:rafaelpeeters33@gmail.com" 
-              class="inline-flex items-center gap-3 text-lg sm:text-xl font-medium text-zinc-100 hover:text-[#5c78b0] transition-colors group"
-            >
-              <svg class="w-5 h-5 text-[#5c78b0] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-              <span class="truncate">rafaelpeeters33@gmail.com</span>
-            </a>
-
-            <!-- Liens secondaires (Localisation, GitHub, LinkedIn) -->
-            <div class="reveal-on-scroll space-y-2.5 pt-4 text-xs font-mono text-zinc-400">
-              <!-- Localisation -->
-              <div class="inline-flex items-center gap-2.5 text-zinc-500">
-                <svg class="w-4 h-4 shrink-0 text-[#5c78b0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-                <span>Bordeaux, France</span>
-              </div>
-
-              <!-- GitHub -->
-              <div>
-                <a 
-                  href="https://github.com/rafaelpeeters" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  class="inline-flex items-center gap-2.5 hover:text-zinc-200 transition-colors"
-                >
-                  <svg class="w-4 h-4 text-[#5c78b0] shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                  </svg>
-                  <span>github.com/rafaelpeeters</span>
-                </a>
-              </div>
-
-              <!-- LinkedIn -->
-              <div>
-                <a 
-                  href="https://linkedin.com/in/rafael-peeters" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  class="inline-flex items-center gap-2.5 hover:text-zinc-200 transition-colors"
-                >
-                  <svg class="w-4 h-4 text-[#5c78b0] shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                  </svg>
-                  <span>linkedin.com/in/rafael-peeters</span>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <!-- COLONNE DROITE : Formulaire épuré -->
-        <div class="lg:col-span-7">
-          <form id="contact-form" class="reveal-on-scroll space-y-4">
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <!-- NOM -->
-              <div class="space-y-1.5">
-                <label for="form-name" class="block font-mono text-[10px] tracking-widest text-zinc-400 uppercase">
-                  <span data-en="NAME">NOM</span>
-                </label>
-                <input 
-                  type="text" 
-                  id="form-name" 
-                  required
-                  class="w-full px-4 py-3 rounded-xl bg-[#0c1017] border border-[#1e2638] text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-zinc-500 transition-colors"
-                />
-              </div>
+        <p class="mt-2 inline-flex items-center gap-2 font-mono text-sm text-zinc-400">
+          <svg class="h-4 w-4 shrink-0 text-[#5c78b0]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          Bordeaux, France
+        </p>
 
-              <!-- E-MAIL -->
-              <div class="space-y-1.5">
-                <label for="form-email" class="block font-mono text-[10px] tracking-widest text-zinc-400 uppercase">
-                  <span data-en="EMAIL">E-MAIL</span>
-                </label>
-                <input 
-                  type="email" 
-                  id="form-email" 
-                  required
-                  class="w-full px-4 py-3 rounded-xl bg-[#0c1017] border border-[#1e2638] text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-zinc-500 transition-colors"
-                />
-              </div>
-            </div>
-
-            <!-- MESSAGE -->
-            <div class="space-y-1.5">
-              <label for="form-message" class="block font-mono text-[10px] tracking-widest text-zinc-400 uppercase">
-                <span data-en="YOUR MESSAGE">VOTRE MESSAGE</span>
-              </label>
-              <textarea 
-                id="form-message" 
-                rows="5"
-                required
-                class="w-full px-4 py-3 rounded-xl bg-[#0c1017] border border-[#1e2638] text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-zinc-500 transition-colors resize-none"
-              ></textarea>
-            </div>
-
-            <!-- BOUTON D'ENVOI & MENTION -->
-            <div class="pt-2 space-y-3">
-              <button 
-                type="submit" 
-                id="send-btn"
-                class="interactive-button px-5 py-2.5 rounded-xl bg-[#141418] border border-[#2a2a32] hover:border-zinc-600 text-xs font-mono font-medium text-zinc-200 hover:text-white transition-colors inline-flex items-center gap-2 group"
-              >
-                <span id="send-btn-text" data-en="Send message">Envoyer le message</span>
-                <span class="text-zinc-400 group-hover:translate-x-0.5 transition-transform">→</span>
-              </button>
-            </div>
-
-          </form>
-        </div>
-
+        <nav id="contact-links" class="mt-3 flex flex-wrap items-center justify-start gap-x-6 gap-y-3 font-mono text-xs" aria-label="Liens de contact">
+          <a href="https://github.com/rafaelpeeters" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-zinc-300 transition-colors hover:text-[#5c78b0]">
+            <svg class="h-4 w-4 text-[#5c78b0]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/rafael-peeters" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-zinc-300 transition-colors hover:text-[#5c78b0]">
+            <svg class="h-4 w-4 text-[#5c78b0]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="images/cv.pdf" target="_blank" rel="noopener noreferrer" class="interactive-button inline-flex items-center gap-2 rounded-xl bg-zinc-100 px-5 py-2.5 font-mono text-xs font-semibold text-zinc-950 transition-all hover:bg-white">
+            <span data-en="View my CV">Consulter mon CV</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
       </div>
     </section>
 
   </main>
 
-  <!-- Toast de confirmation -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden items-center gap-2 px-4 py-3 rounded-xl bg-[#08080a] border border-[#5c78b0]/40 text-xs font-mono text-zinc-100 shadow-2xl">
-    <span class="w-2 h-2 rounded-full bg-[#5c78b0]"></span>
-    <span id="toast-text" data-en="Message sent successfully!">Message envoyé avec succès !</span>
-  </div>
+  <footer class="border-t border-[#292a32] py-4">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-6 font-mono text-sm text-zinc-400 sm:flex-row sm:items-start sm:justify-between">
+      <p>© 2026 Rafael Peeters</p>
+      <details class="text-left sm:text-right">
+        <summary class="cursor-pointer transition-colors hover:text-zinc-100">Mentions légales</summary>
+        <div class="mt-2 max-w-xl space-y-1 text-xs leading-relaxed text-zinc-500 sm:ml-auto">
+          <p>Site personnel, sans activité commerciale, édité par Rafael Peeters.</p>
+          <p>Hébergement : GitHub Pages, par GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis.</p>
+        </div>
+      </details>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
