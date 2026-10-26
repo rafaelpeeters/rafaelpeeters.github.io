@@ -49,6 +49,50 @@ body {
   font-size: 14px;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .page-enter .page-load-reveal {
+    animation: content-appear 550ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  .page-enter .language-title-reveal {
+    animation: language-title-appear 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: var(--title-reveal-delay, 0ms);
+  }
+
+  .reveal-on-scroll {
+    transition: opacity 650ms ease, transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .motion-ready .reveal-on-scroll:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+@keyframes content-appear {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes language-title-appear {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Halo feutré autour du portrait */
 .portrait-glow-wrapper {
   position: relative;
@@ -86,11 +130,35 @@ body {
   background-color: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: 20px;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .bento-card:hover {
   border-color: rgba(255, 255, 255, 0.16);
+}
+
+.group:hover .bento-card {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -18px rgba(92, 120, 176, 0.35);
+}
+
+.bento-card img {
+  transition: transform 350ms ease;
+}
+
+.group:hover .bento-card img {
+  transform: scale(1.025);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Badges technologiques */
@@ -102,4 +170,9 @@ body {
   font-family: 'Geist Mono', monospace;
   font-size: 12px;
   color: #d4d4d8;
+}
+
+.skill-tag {
+  background-color: #0d0d10;
+  border-color: #1b1b20;
 }
