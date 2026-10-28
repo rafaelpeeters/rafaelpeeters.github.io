@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro-PC Dépannage - Accueil</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+  <link rel="stylesheet" href="style_moderne.css" />
+</head>
+
+<body>
+  <div class="barre-utilisateur">
+    <ul class="barre-liste">
+      <li><span>Bonjour !</span></li>
+      <li><a href="#" id="lien-connexion">Connexion</a></li>
+      <li><a href="#">Inscription</a></li>
+    </ul>
+    <ul class="barre-liste">
+      <li><a href="#">📍Localisation</a></li>
+      <li><a href="#">🛒Panier</a></li>
+      <li><a href="#">👤Profil</a></li>
+    </ul>
+  </div>
+  <header>
+    <div class="entete-titre">
+      <div class="logo">R</div>
+      <div class="contenu-titre">
+        <h1 class="animate-fade-in">Retro-PC Dépannage</h1>
+        <h2 class="animate-fade-in">Les experts pour vos vieux ordinateurs !</h2>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu-principal">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="lien-actif">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contact-main">
+    <section class="conteneur-contact">
+      <h2 class="titre-contact">Contactez-nous</h2>
+      <p class="description-contact">Pour toute question ou demande de devis, remplissez le formulaire ci-dessous.</p>
+
+      <form action="#" method="post">
+        <div class="groupe-champ">
+          <label for="nom-client">Nom complet :</label>
+          <input type="text" id="nom-client" name="nom" placeholder="Ex: Blabla Bleble" required>
+        </div>
+
+        <div class="groupe-champ">
+          <label for="email-client">Votre adresse Email :</label>
+          <input type="email" id="email-client" name="email" placeholder="nom@iut-bordeaux.com" required>
+        </div>
+
+        <div class="groupe-champ">
+          <label for="message-client">Détail de la panne :</label>
+          <textarea id="message-client" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="bouton-envoi">Envoyer le message</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <ul class="liens">
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="#">Politique de confidentialité</a></li>
+    </ul>
+    <p>&copy; 2026 Retro-PC Dépannage Inc. Tous droits réservés.</p>
+    <ul class="liens">
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+  </footer>
+
+</body>
+
+</html>

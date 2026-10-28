@@ -1,0 +1,564 @@
+/* DESIGN SYSTEM / VARIABLES */
+:root {
+  --couleur-primaire: #54838a;
+  --couleur-secondaire: #496f72;
+  --couleur-tertiaire: #43474e;
+  --couleur-quaternaire: #cccccc;
+  --couleur-blanche: #ffffff;
+  --couleur-survol: #61a5a2;
+  --couleur-noire: #222222;
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 1rem;
+  --esp-4: 1.5rem;
+  --esp-5: 2rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* STRUCTURE GENERALE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "barre-utilisateur"
+    "header"
+    "main"
+    "footer";
+}
+
+/* BARRE UTILISATEUR */
+.barre-utilisateur {
+  display: flex;
+  grid-area: barre-utilisateur;
+  justify-content: space-between;
+  padding: var(--esp-3);
+  background-color: var(--couleur-tertiaire);
+  font-size: 0.8rem;
+  align-items: center;
+  gap: var(--esp-3);
+  color: var(--couleur-blanche);
+}
+
+.barre-utilisateur a {
+  color: var(--couleur-blanche);
+  transition: color 0.2s ease-in;
+  text-decoration: none;
+}
+
+.barre-utilisateur a:hover {
+  color: var(--couleur-survol);
+}
+
+.barre-liste {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: var(--esp-2);
+  align-items: center;
+}
+
+.barre-liste li:not(:first-child)::before {
+  content: '|';
+  margin-right: var(--esp-2);
+}
+
+/* HEADER ET NAVIGATION */
+header {
+  display: flex;
+  grid-area: header;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--esp-4);
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  background-color: var(--couleur-quaternaire);
+  z-index: 100;
+}
+
+.entete-titre {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--couleur-primaire);
+  color: white;
+  font-weight: 700;
+  font-size: 1.75rem;
+  border-radius: 0.75rem;
+}
+
+.contenu-titre {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+}
+
+.contenu-titre h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.contenu-titre h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.menu-principal {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: var(--esp-4);
+  margin-top: var(--esp-3);
+}
+
+.menu-principal a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: var(--esp-2) var(--esp-3);
+  color: var(--couleur-noire);
+  transition: 0.2s ease-in;
+}
+
+.menu-principal a:hover {
+  color: var(--couleur-survol);
+}
+
+.menu-principal .lien-actif {
+  color: var(--couleur-secondaire);
+}
+
+/* MAIN DE L'INDEX */
+.index-main {
+  grid-area: main;
+  display: grid;
+  max-width: 1600px;
+  width: 95%;
+  margin: 0 auto;
+  padding: var(--esp-3);
+  gap: var(--esp-4);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "presentation"
+    "vitrine"
+    "services"
+    "tarifs"
+    "sidebar";
+}
+
+/* Attribution des frid areas pour l'index  */
+.presentation-accueil { grid-area: presentation; }
+.conteneur-visuel { grid-area: vitrine; }
+.section-services { grid-area: services; }
+.section-tarifs { grid-area: tarifs; }
+.barre-laterale { grid-area: sidebar; }
+
+/* SECTION BANNIERE */
+.conteneur-visuel {
+  position: relative;
+  min-height: 20rem;
+  margin: var(--esp-3);
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-fond img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.superposition-texte {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--couleur-blanche);
+  padding: var(--esp-3);
+}
+
+.titre-accroche {
+  margin-bottom: var(--esp-2);
+  font-size: 2rem;
+}
+
+.sous-titre {
+  font-size: 1.1rem;
+  margin-bottom: var(--esp-4);
+}
+
+.bouton-action {
+  display: inline-block;
+  background-color: var(--couleur-primaire);
+  color: var(--couleur-blanche);
+  padding: var(--esp-3);
+  text-decoration: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: transform 0.2s ease-in, background-color 0.2s;
+}
+
+.bouton-action:hover {
+  background-color: var(--couleur-survol);
+  transform: scale(1.05);
+}
+
+/* SECTION SERVICES */
+.section-services {
+  padding: var(--esp-5) var(--esp-3);
+  background-color: var(--couleur-blanche);
+}
+
+.titre-services {
+  text-align: center;
+  margin-bottom: var(--esp-5);
+  color: var(--couleur-tertiaire);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--esp-3);
+}
+
+.titre-services::before,
+.titre-services::after {
+  content: "";
+  height: 2px;
+  width: 50px;
+  background-color: var(--couleur-quaternaire);
+}
+
+.flex-services {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.carte-service {
+  background-color: var(--couleur-blanche);
+  padding: var(--esp-4);
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid var(--couleur-primaire);
+  transition: transform 0.3s ease;
+}
+
+.carte-service:hover {
+  transform: scale(1.05);
+}
+
+.icone-service {
+  font-size: 2.5rem;
+  margin-bottom: var(--esp-2);
+  display: block;
+}
+
+.carte-service h3 {
+  color: var(--couleur-primaire);
+  margin-bottom: var(--esp-2);
+  font-size: 1.25rem;
+}
+
+.carte-service p {
+  color: var(--couleur-tertiaire);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* SECTION TARIFS */
+.section-tarifs {
+  max-width: 70rem;
+  margin: 2rem auto;
+}
+
+.titre-tarifs {
+  color: var(--couleur-tertiaire);
+  margin-bottom: var(--esp-4);
+  font-size: 1.5rem;
+}
+
+.tableau-container {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.tableau-moderne {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--couleur-blanche);
+}
+
+.tableau-moderne thead tr {
+  background-color: var(--couleur-primaire);
+  color: var(--couleur-blanche);
+  text-align: left;
+}
+
+.tableau-moderne th, 
+.tableau-moderne td {
+  padding: var(--esp-3) var(--esp-4);
+  border-bottom: 1px solid var(--couleur-quaternaire);
+}
+
+.tableau-moderne tbody tr:nth-child(even) {
+  background-color: #f1f5f8;
+}
+
+.tableau-moderne tbody tr:hover {
+  background-color: rgba(84, 131, 138, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.prix-devis {
+  font-weight: 700;
+  color: var(--couleur-secondaire);
+}
+
+.note-contact {
+  margin-top: var(--esp-3);
+  font-style: italic;
+  color: var(--couleur-tertiaire);
+  font-size: 0.9rem;
+}
+
+/* SECTION ASIDE  */
+.barre-laterale {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+}
+
+.carte-aside {
+  background-color: var(--couleur-secondaire);
+  padding: var(--esp-4);
+  border-radius: 1rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.carte-aside ul {
+  list-style: none;
+}
+
+.carte-aside h3 {
+  margin-bottom: var(--esp-2);
+  font-size: 1.25rem;
+}
+
+.carte-aside:hover {
+  transform: scale(1.05);
+}
+
+/* PAGE CONTACT  */
+.contact-main {
+  grid-area: main;
+  display: grid;
+  padding: var(--esp-5);
+  background-color: var(--couleur-blanche);
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: "formulaire-contact";
+}
+
+.conteneur-contact-large {
+  grid-area: formulaire-contact;
+  background-color: var(--couleur-blanche);
+  padding: var(--esp-5);
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  max-width: 900px;
+  width: 100%;
+  border: 1px solid var(--couleur-quaternaire);
+}
+
+.titre-contact {
+  color: var(--couleur-primaire);
+  font-size: 2.5rem;
+  margin-bottom: var(--esp-3);
+  text-align: center;
+}
+
+.description-contact {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--couleur-tertiaire);
+  margin-bottom: var(--esp-5);
+}
+
+.groupe-champ {
+  margin-bottom: var(--esp-4);
+}
+
+.groupe-champ label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--couleur-noire);
+  margin-bottom: var(--esp-2);
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.groupe-champ input, 
+.groupe-champ textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--couleur-quaternaire);
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.groupe-champ input:focus, 
+.groupe-champ textarea:focus {
+  border-color: var(--couleur-primaire);
+  box-shadow: 0 0 0 4px rgba(84, 131, 138, 0.1);
+  outline: none;
+}
+
+.bouton-envoi {
+  background-color: var(--couleur-primaire);
+  color: var(--couleur-blanche);
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in, background-color 0.2s;
+  margin-top: var(--esp-3);
+}
+
+.bouton-envoi:hover {
+  background-color: var(--couleur-survol);
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  padding: var(--esp-4);
+  display: flex;
+  grid-area: footer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  gap: var(--esp-2);
+  background-color: var(--couleur-tertiaire);
+  text-align: center;
+  color: white;
+}
+
+.liens {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: var(--esp-4);
+}
+
+.liens a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+
+.liens a:hover {
+  color: var(--couleur-survol);
+}
+
+/* MEDIA QUERIES  */
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    padding: var(--esp-4);
+  }
+
+  .index-main {
+    grid-template-columns: 1fr 320px;
+    grid-template-areas:
+      "presentation sidebar"
+      "vitrine sidebar"
+      "services sidebar"
+      "tarifs sidebar";
+    width: 80%;
+  }
+
+  .conteneur-visuel {
+    min-height: 28rem;
+  }
+
+  .titre-accroche {
+    font-size: 3rem;
+  }
+
+  .sous-titre {
+    font-size: 1.3rem;
+  }
+
+  .flex-services {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: var(--esp-3);
+  }
+
+  .carte-service {
+    flex: 1;
+  }
+
+  .carte-aside {
+    margin-left: var(--esp-5);
+  }
+
+  footer {
+    flex-direction: row;
+  }
+}

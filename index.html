@@ -1,640 +1,788 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rafael Peeters — Portfolio</title>
-  <meta name="description" content="Portfolio d'ingénierie logicielle et systèmes." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <script src="tailwind.config.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body class="relative min-h-screen selection:bg-[#5c78b0]/30 selection:text-[#5c78b0]">
-
-  <div class="fixed inset-0 bg-engineering-grid pointer-events-none z-0"></div>
-
-  <header class="sticky top-0 z-40 backdrop-blur-md bg-[#000000]/85 border-b border-[#292a32]">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <a href="#about" class="font-mono text-sm font-semibold text-zinc-200 hover:text-white transition-colors">
-          rafaelpeeters
-        </a>
-        <span class="w-1 h-1 rounded-full bg-[#5c78b0]"></span>
-        <span class="text-xs font-mono text-zinc-400" data-en="Computer Science Internship Search - September 2027">Recherche Alternance Informatique - Septembre 2027</span>
-      </div>
-
-      <nav class="flex items-center gap-3 sm:gap-6 text-xs font-mono text-zinc-400">
-        <a href="#about" class="hover:text-zinc-200 transition-colors" data-en="About">À propos</a>
-        <a href="#projects" class="hover:text-zinc-200 transition-colors" data-en="Projects">Projets</a>
-        <a href="#contact" class="hover:text-zinc-200 transition-colors" data-en="Contact">Contact</a>
-        <div class="flex items-center gap-1 rounded-md border border-[#292a32] p-0.5" role="group" aria-label="Language">
-          <button id="language-fr" type="button" lang="fr" aria-label="Français" aria-pressed="true" class="interactive-button language-button rounded px-2 py-1 bg-[#5c78b0] text-white">FR</button>
-          <button id="language-en" type="button" lang="en" aria-label="English" aria-pressed="false" class="interactive-button language-button rounded px-2 py-1 bg-transparent text-zinc-500">EN</button>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <nav id="section-index" class="section-index" aria-label="Navigation des sections">
-    <div class="section-index-nav">
-      <span class="section-index-progress" aria-hidden="true"></span>
-      <a href="#about" aria-current="location">
-        <span class="section-index-marker" aria-hidden="true"></span>
-        <span class="section-index-label" data-en="About">À propos</span>
-      </a>
-      <a href="#projects">
-        <span class="section-index-marker" aria-hidden="true"></span>
-        <span class="section-index-label" data-en="Projects">Projets</span>
-      </a>
-      <a href="#contact">
-        <span class="section-index-marker" aria-hidden="true"></span>
-        <span class="section-index-label" data-en="Contact">Contact</span>
-      </a>
-    </div>
-  </nav>
-
-  <main class="page-enter relative z-10 max-w-6xl mx-auto px-6 pt-6 sm:pt-12 pb-40 space-y-20 sm:space-y-24">
-
-    <section id="about" class="scroll-mt-24">
-      <h1 class="reveal-on-scroll editorial-headline text-2xl sm:text-3xl lg:text-[34px] uppercase text-zinc-100 mb-0">
-        Rafael Peeters
-      </h1>
-      <div class="reveal-on-scroll border-b border-[#292a32] pb-5 mb-8"></div>
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-
-        <div class="lg:col-span-5 space-y-7">
-          <div class="reveal-on-scroll portrait-glow-wrapper w-full max-w-[380px]">
-            <div class="portrait-card aspect-[4/5] w-full">
-              <img
-                src="images/rafael.png"
-                alt="Rafael Peeters"
-                class="w-full h-full object-cover object-center contrast-[1.05] brightness-95"
-              />
-            </div>
-          </div>
-
-          <div class="space-y-4 max-w-[380px] pt-2 text-sm font-mono">
-            <div class="reveal-on-scroll flex items-start justify-between gap-4 border-t border-[#292a32] pt-3.5">
-              <span class="meta-label shrink-0 text-[#5c78b0]" data-en="Currently">Actuellement</span>
-              <span class="text-zinc-200 text-right font-medium max-w-[240px] leading-relaxed">
-                <span data-en="Computer Science student">Étudiant en BUT Informatique</span>
-              </span>
-            </div>
-
-            <div class="reveal-on-scroll flex items-start justify-between gap-4 border-t border-[#292a32] pt-3.5">
-              <span class="meta-label shrink-0 text-[#5c78b0]" data-en="Location">Localisation</span>
-              <span class="text-zinc-200 text-right">Bordeaux, France</span>
-            </div>
-
-            <div class="reveal-on-scroll flex items-start justify-between gap-4 border-t border-[#292a32] pt-3.5">
-              <span class="meta-label shrink-0 text-[#5c78b0]">Github</span>
-              <a
-                href="https://github.com/rafaelpeeters"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-zinc-300 hover:text-[#5c78b0] transition-colors flex items-center gap-1 group text-right"
-              >
-                <span>github.com/rafaelpeeters</span>
-                <span class="text-zinc-500 group-hover:text-[#5c78b0] text-[11px]">↗</span>
-              </a>
-            </div>
-
-            <div class="reveal-on-scroll flex items-start justify-between gap-4 border-t border-[#292a32] pt-3.5">
-              <span class="meta-label shrink-0 text-[#5c78b0]">LinkedIn</span>
-              <a
-                href="https://linkedin.com/in/rafael-peeters"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-zinc-300 hover:text-[#5c78b0] transition-colors flex items-center gap-1 group text-right"
-              >
-                <span>linkedin.com/in/rafael-peeters</span>
-                <span class="text-zinc-500 group-hover:text-[#5c78b0] text-[11px]">↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:col-span-7 space-y-6">
-          <div class="space-y-4 text-sm sm:text-base text-zinc-400 leading-relaxed font-normal">
-            <p class="reveal-on-scroll">
-              <span data-en="My name is Rafael, and I am a second-year Computer Science student in the international program at IUT de Bordeaux.">Je m'appelle Rafael, je suis étudiant en deuxième année de BUT Informatique (parcours international) à l'IUT de Bordeaux.</span>
-            </p>
-            <p class="reveal-on-scroll">
-              <span data-en="My experience spans the full technical lifecycle: software development, modern web interfaces, data design and management, as well as Linux systems and networks.">Mon profil touche à l'ensemble du cycle technique : développement logiciel, interfaces web modernes, conception et gestion de données, ainsi que les systèmes et réseaux sous Linux.</span>
-            </p>
-            <p class="reveal-on-scroll">
-              <span data-en="I have applied these skills to several hands-on projects, which you can explore in the Projects section below.">J'ai mis ces compétences en pratique sur différents projets concrets, dont vous pourrez trouver les détails dans la section « Mes Réalisations » ci-dessous.</span>
-            </p>
-            <p class="reveal-on-scroll text-zinc-200 font-medium">
-              <span data-en="I am looking for a work-study position starting in September 2027.">Je recherche une alternance pour la rentrée de septembre 2027.</span><br />
-              <span data-en="(3 weeks at the company / 1 week in training)">(rythme 3 semaines en entreprise / 1 semaine en formation)</span>
-            </p>
-          </div>
-
-          <div class="flex flex-wrap items-center gap-4 pt-1 font-mono text-xs">
-            <a href="#projects" class="interactive-button reveal-on-scroll inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-100 text-zinc-950 font-semibold hover:bg-white transition-all">
-              <span data-en="View projects">Voir les réalisations</span>
-              <span>↓</span>
-            </a>
-            <a href="#contact" class="interactive-button reveal-on-scroll inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900 border border-[#141417] text-zinc-300 hover:border-zinc-700 hover:text-white transition-all">
-              <span data-en="Get in touch">Prendre contact</span>
-              <span>→</span>
-            </a>
-            <a href="images/cv.pdf" target="_blank" rel="noopener noreferrer" class="interactive-button reveal-on-scroll inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900 border border-[#141417] text-zinc-300 hover:border-zinc-700 hover:text-white transition-all">
-              <span data-en="View my CV">Consulter mon CV</span>
-              <span>↗</span>
-            </a>
-          </div>
-
-          <div class="pt-5 border-t border-[#292a32] space-y-3">
-            <div class="reveal-on-scroll meta-label section-kicker font-medium" data-en="// TECHNICAL SKILLS">// COMPÉTENCES TECHNIQUES</div>
-
-            <div class="-ml-2 p-4 sm:p-5 divide-y divide-[#292a32] text-xs font-mono">
-              <div class="reveal-on-scroll py-2.5 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 text-xs">
-                <span class="inline-flex items-center gap-2 text-zinc-200 font-medium shrink-0 sm:w-52 text-xs uppercase tracking-wider">
-                  <span class="w-3 h-px bg-[#5c78b0] shrink-0" aria-hidden="true"></span>
-                  <span data-en="Development & Back-end">Développement & Back-end</span>
-                </span>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">Java</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">C</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">Python</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">C#</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">PHP (Symfony)</span>
-                </div>
-              </div>
-
-              <div class="reveal-on-scroll py-2.5 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 text-xs">
-                <span class="inline-flex items-center gap-2 text-zinc-200 font-medium shrink-0 sm:w-52 text-xs uppercase tracking-wider">
-                  <span class="w-3 h-px bg-[#5c78b0] shrink-0" aria-hidden="true"></span>
-                  <span data-en="Web & Front-end">Web & Front-end</span>
-                </span>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">TypeScript (React)</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">JavaScript</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">CSS3</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">HTML5</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">Responsive Design</span>
-                </div>
-              </div>
-
-              <div class="reveal-on-scroll py-2.5 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 text-xs">
-                <span class="inline-flex items-center gap-2 text-zinc-200 font-medium shrink-0 sm:w-52 text-xs uppercase tracking-wider">
-                  <span class="w-3 h-px bg-[#5c78b0] shrink-0" aria-hidden="true"></span>
-                  <span data-en="Data & Modeling">Données & Modélisation</span>
-                </span>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">SQL Server</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">MySQL</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">Oracle</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">SQLAlchemy</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">UML</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">MCD</span>
-                </div>
-              </div>
-
-              <div class="reveal-on-scroll py-2.5 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 text-xs">
-                <span class="inline-flex items-center gap-2 text-zinc-200 font-medium shrink-0 sm:w-52 text-xs uppercase tracking-wider">
-                  <span class="w-3 h-px bg-[#5c78b0] shrink-0" aria-hidden="true"></span>
-                  <span data-en="Systems & Networks">Systèmes & Réseaux</span>
-                </span>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">Linux</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">Bash</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">HTTP/HTTPS</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">DNS</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">Routage</span>
-                </div>
-              </div>
-
-              <div class="reveal-on-scroll py-2.5 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 text-xs">
-                <span class="inline-flex items-center gap-2 text-zinc-200 font-medium shrink-0 sm:w-52 text-xs uppercase tracking-wider">
-                  <span class="w-3 h-px bg-[#5c78b0] shrink-0" aria-hidden="true"></span>
-                  <span data-en="Tools & Methods">Outils & Méthodologies</span>
-                </span>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">Git</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">Docker</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag" data-en="Unit Testing">Tests Unitaires</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag" data-en="Scrum Methodology">Méthode Scrum</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">VS Code</span>
-                  <span class="tech-tag !py-0.5 !px-2 !text-[11px] skill-tag">Visual Studio</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section id="projects" class="scroll-mt-24 space-y-8">
-
-      <div class="reveal-on-scroll flex items-center justify-between border-b border-[#292a32] pb-5">
-        <div>
-          <h2 class="editorial-headline text-2xl sm:text-3xl text-zinc-100" data-en="Projects">
-            Mes Réalisations
-          </h2>
-        </div>
-      </div>
-
-      <div class="space-y-12">
-        <div class="space-y-4">
-          <div class="reveal-on-scroll meta-label section-kicker" data-en="// FEATURED PROJECTS">// Projets phares</div>
-
-          <article data-project-id="meteo" class="reveal-on-scroll grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group">
-            <div class="lg:col-span-6 bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-meteo.png" alt="Capture de l'application de visualisation des données météorologiques" data-alt-en="Screenshot of the weather data visualization application" class="block w-full aspect-[2/1] object-cover" loading="lazy" />
-            </div>
-
-            <div class="lg:col-span-6 space-y-3">
-              <div class="flex items-center gap-3 font-mono text-xs text-zinc-500">
-                <span>2026</span>
-                <span>—</span>
-                <span class="text-[#5c78b0] flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#5c78b0]"></span>
-                  <span data-en="Application development">Développement d'application</span>
-                </span>
-              </div>
-
-              <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Weather Data Visualization">Visualisation de Données Météorologiques</h3>
-              <p class="font-mono text-xs text-zinc-400" data-en="Interactive C# application & relational database">Application interactive C# & base de données relationnelle</p>
-
-              <p class="text-sm text-zinc-400 leading-relaxed">
-                <span data-en="Design of an interactive desktop application for intuitive browsing of open weather data from the Nouvelle-Aquitaine region. Persistent relational database storage, statistical analysis with Python, and a complete user-friendly interface.">Conception d'une application de bureau interactive permettant de naviguer intuitivement à travers les données météorologiques open data de la région Nouvelle-Aquitaine. Stockage persistant en base relationnelle, analyses statistiques couplées à Python et interface ergonomique complète.</span>
-              </p>
-
-              <div class="flex flex-wrap gap-1.5 pt-1">
-                <span class="tech-tag !py-0.5 !px-2 !text-[11px]">C#</span>
-                <span class="tech-tag !py-0.5 !px-2 !text-[11px]">Python</span>
-                <span class="tech-tag !py-0.5 !px-2 !text-[11px]">SQL</span>
-                <span class="tech-tag !py-0.5 !px-2 !text-[11px]">UML</span>
-                <span class="tech-tag !py-0.5 !px-2 !text-[11px]">Visual Studio</span>
-                <span class="tech-tag !py-0.5 !px-2 !text-[11px]">Git</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <article data-project-id="graphes" class="reveal-on-scroll grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group">
-          <div class="lg:col-span-6 bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-            <img src="images/projet-graphes.png" alt="Capture du projet de coloration de graphes planaires" data-alt-en="Screenshot of the planar graph coloring project" class="block w-full aspect-[2/1] object-cover" loading="lazy" />
-          </div>
-
-          <div class="lg:col-span-6 space-y-3">
-            <div class="flex items-center gap-3 font-mono text-xs text-zinc-500">
-              <span>2025</span>
-              <span>—</span>
-              <span class="text-[#5c78b0] flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#5c78b0]"></span>
-                <span data-en="Graph visualization">Visualisation de graphes</span>
-              </span>
-            </div>
-
-            <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Planar Graph Coloring">Coloration de Graphes Planaires</h3>
-            <p class="font-mono text-xs text-zinc-400" data-en="Data structures & optimization heuristics in Java">Structures de données & heuristiques d'optimisation en Java</p>
-
-            <p class="text-sm text-zinc-400 leading-relaxed">
-              <span data-en="Object-oriented development of data structures for large graphs and implementation of three optimization algorithms (Welsh–Powell, 5-coloring, and 6-coloring). Validated with a comprehensive JUnit test suite and complexity analysis.">Développement orienté objet de structures de données modélisant des graphes de grande taille et implémentation de trois algorithmes d'optimisation (Welsh & Powell, 5-coloration et 6-coloration). Validation par suite exhaustive de tests unitaires (JUnit) et dossier de calcul de complexité.</span>
-            </p>
-
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">Java</span>
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">JUnit</span>
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">Algorithmique</span>
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">UML</span>
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">NetBeans</span>
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">Git</span>
-            </div>
-          </div>
-        </article>
-
-        <article data-project-id="nextcloud" class="reveal-on-scroll grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group">
-          <div class="lg:col-span-6 bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-            <img src="images/projet-nextcloud.png" alt="Capture de l'installation réseau et du serveur Nextcloud" data-alt-en="Screenshot of the network and Nextcloud server setup" class="block w-full aspect-[2/1] object-cover" loading="lazy" />
-          </div>
-
-          <div class="lg:col-span-6 space-y-3">
-            <div class="flex items-center gap-3 font-mono text-xs text-zinc-500">
-              <span>2025</span>
-              <span>—</span>
-              <span class="text-[#5c78b0] flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#5c78b0]"></span>
-                <span data-en="Network services & Linux">Services réseaux & Linux</span>
-              </span>
-            </div>
-
-            <h3 class="text-2xl font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Network Deployment & Nextcloud Server">Déploiement Réseau & Serveur Nextcloud</h3>
-            <p class="font-mono text-xs text-zinc-400" data-en="Addressing, virtual routing, and security configuration on Debian">Configuration d'adressage, routage virtuel et sécurisation sous Debian</p>
-
-            <p class="text-sm text-zinc-400 leading-relaxed">
-              <span data-en="Configured IP addressing and routing for a virtual network emulated with NEmu on Debian Linux, hosting and securing a complete Nextcloud server. Wrote a full technical wiki and step-by-step tutorials in English on GitLab.">Configuration de l'adressage IP et du routage d'un réseau virtuel émulé sous Linux Debian avec l'outil NEmu pour y héberger et sécuriser un serveur cloud Nextcloud complet. Rédaction intégrale d'un wiki technique et de tutoriels pas-à-pas en anglais sur GitLab.</span>
-            </p>
-
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">Linux</span>
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">NEmu</span>
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">Debian</span>
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">Bash</span>
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">GitLab Wiki</span>
-              <span class="tech-tag !py-0.5 !px-2 !text-[11px]">Nextcloud</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="pt-8 border-t border-[#292a32] space-y-6">
-        <div class="flex items-center justify-between">
-          <div class="reveal-on-scroll meta-label section-kicker" data-en="// OTHER PROJECTS">// AUTRES RÉALISATIONS</div>
-        </div>
-
-        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
-
-          <article data-project-id="capteurs" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
-            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-capteurs.png" alt="Capture du projet d’analyse de données de capteurs" data-alt-en="Screenshot of the sensor data analysis project" class="block h-44 w-full object-cover" loading="lazy" />
-            </div>
-            <div class="space-y-1.5">
-              <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Sensor Data Analysis">Analyse de données de capteurs</h3>
-                <span class="font-mono text-xs text-zinc-500">2026</span>
-              </div>
-              <p class="font-mono text-xs text-zinc-400" data-en="C measurement analyzer and report generator">Analyseur de mesures et générateur de synthèse en C</p>
-              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="Analyze sensor measurements and generate a summary in C.">Analyser des mesures de capteurs et générer une synthèse en C.</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p>C</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article data-project-id="graphdesigner" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
-            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-graphdesigner.png" alt="Capture de l’application d’édition de graphes" data-alt-en="Screenshot of the graph editing application" class="block h-44 w-full object-cover" loading="lazy" />
-            </div>
-            <div class="space-y-1.5">
-              <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Graph Editor">Éditeur de graphes</h3>
-                <span class="font-mono text-xs text-zinc-500">2026</span>
-              </div>
-              <p class="font-mono text-xs text-zinc-400" data-en="Interactive graph editing application in C3">Application interactive d’édition de graphes en C3</p>
-              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="Create an interactive graph editing application in C3.">Créer une application interactive d’édition de graphes en C3.</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p>C3</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article data-project-id="blogue" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
-            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-blogue.png" alt="Capture du projet d’éditeur de blogue" data-alt-en="Screenshot of the blog editor project" class="block h-44 w-full object-cover" loading="lazy" />
-            </div>
-            <div class="space-y-1.5">
-              <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Blog Editor">Éditeur de blogue</h3>
-                <span class="font-mono text-xs text-zinc-500">2025</span>
-              </div>
-              <p class="font-mono text-xs text-zinc-400" data-en="Bash blog editor with HTML and PDF export">Blogue en Bash, export en HTML et PDF</p>
-              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="Build a blog editor in Bash with HTML and PDF export.">Créer un éditeur de blogue en Bash avec export HTML et PDF.</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p>Bash, HTML, PDF</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article data-project-id="pixelwar" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
-            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-pixelwar.jpeg" alt="Capture du projet Guerre des Pixels" data-alt-en="Screenshot of the Pixel War project" class="block h-44 w-full object-cover" loading="lazy" />
-            </div>
-            <div class="space-y-1.5">
-              <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Pixel War">Guerre des Pixels</h3>
-                <span class="font-mono text-xs text-zinc-500">2026</span>
-              </div>
-              <p class="font-mono text-xs text-zinc-400" data-en="Inter-IUT adaptation of r/place in JavaScript">Adaptation inter-IUT de r/place en JavaScript</p>
-              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="Create an inter-IUT adaptation of r/place in JavaScript.">Créer une adaptation inter-IUT de r/place en JavaScript.</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p>JavaScript</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article data-project-id="labyrinthe" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
-            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-labyrinthe.png" alt="Capture du jeu de labyrinthe 2D multi-niveaux en Java" data-alt-en="Screenshot of the multi-level 2D Java maze game" class="block h-44 w-full object-cover" loading="lazy" />
-            </div>
-            <div class="space-y-1.5">
-              <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="2D Maze Game">Jeu de Labyrinthe 2D</h3>
-                <span class="font-mono text-xs text-zinc-500">2026</span>
-              </div>
-              <p class="font-mono text-xs text-zinc-400" data-en="Java grid-based game: monster AI & Manhattan lighting">Jeu sur grille en Java : IA des monstres & éclairage Manhattan</p>
-              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article data-project-id="butopia" class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
-            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-butopia.png" alt="Capture du projet Les Mystères de Butopia" data-alt-en="Screenshot of The Mysteries of Butopia project" class="block h-44 w-full object-cover" loading="lazy" />
-            </div>
-            <div class="space-y-1.5">
-              <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="The Mysteries of Butopia">Les Mystères de Butopia</h3>
-                <span class="font-mono text-xs text-zinc-500">2025</span>
-              </div>
-              <p class="font-mono text-xs text-zinc-400" data-en="Interactive C# application & UML design">Application interactive C# & conception UML</p>
-              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article data-project-id="biosphere" hidden class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
-            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-biosphere.png" alt="Capture du projet de jeu de plateau et d’intelligence artificielle" data-alt-en="Screenshot of the board game and AI project" class="block h-44 w-full object-cover" loading="lazy" />
-            </div>
-            <div class="space-y-1.5">
-              <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Board Game & AI">Jeu de Plateau & IA</h3>
-                <span class="font-mono text-xs text-zinc-500">2025</span>
-              </div>
-              <p class="font-mono text-xs text-zinc-400" data-en="Turn-based logic & AI engines in Java">Logique tour par tour & moteurs d'IA en Java</p>
-              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article data-project-id="odomo" hidden class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
-            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-odomo.png" alt="Capture du projet de station domotique" data-alt-en="Screenshot of the smart home station project" class="block h-44 w-full object-cover" loading="lazy" />
-            </div>
-            <div class="space-y-1.5">
-              <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Smart Home Station">Station Domotique</h3>
-                <span class="font-mono text-xs text-zinc-500">2024</span>
-              </div>
-              <p class="font-mono text-xs text-zinc-400" data-en="Code familiarization & Java weather station">Appropriation de code & centrale météo Java</p>
-              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article data-project-id="bd" hidden class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
-            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-bd.png" alt="Capture du projet de base de données Musicalertes" data-alt-en="Screenshot of the Musicalertes database project" class="block h-44 w-full object-cover" loading="lazy" />
-            </div>
-            <div class="space-y-1.5">
-              <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Musicalertes Database">Base de Données Musicalertes</h3>
-                <span class="font-mono text-xs text-zinc-500">2026</span>
-              </div>
-              <p class="font-mono text-xs text-zinc-400" data-en="Win'Design ER modeling & SQL queries">Modélisation MCD Win'Design & requêtes SQL</p>
-              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article data-project-id="web" hidden class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
-            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-web.png" alt="Capture du site Retro-PC Dépannage" data-alt-en="Screenshot of the Retro-PC Repair website" class="block h-44 w-full object-cover" loading="lazy" />
-            </div>
-            <div class="space-y-1.5">
-              <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Retro-PC Repair">Retro-PC Dépannage</h3>
-                <span class="font-mono text-xs text-zinc-500">2025</span>
-              </div>
-              <p class="font-mono text-xs text-zinc-400" data-en="Complete restructuring & CSS design system">Restructuration intégrale & design system CSS</p>
-              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
-              </div>
-            </div>
-          </article>
-
-          <article data-project-id="vm" hidden class="reveal-on-scroll space-y-4 group rounded-2xl border border-[#1e2638] bg-[#0c1017] p-4">
-            <div class="bento-card overflow-hidden rounded-2xl border border-[#1e2638] bg-[#0c1017] group-hover:border-zinc-700 transition-colors">
-              <img src="images/projet-vm.png" alt="Capture du projet de machine virtuelle Debian" data-alt-en="Screenshot of the Debian virtual machine project" class="block h-44 w-full object-cover" loading="lazy" />
-            </div>
-            <div class="space-y-1.5">
-              <div class="flex items-baseline justify-between">
-                <h3 class="text-base font-bold text-zinc-100 group-hover:text-[#5c78b0] transition-colors" data-en="Debian Virtual Machine">Machine Virtuelle Debian</h3>
-                <span class="font-mono text-xs text-zinc-500">2025</span>
-              </div>
-              <p class="font-mono text-xs text-zinc-400" data-en="Secure and reproducible Clojure environment">Environnement Clojure sécurisé & reproductible</p>
-              <div class="space-y-2 border-t border-[#292a32] pt-3 text-xs leading-relaxed">
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— SPECIFICATIONS">— CAHIER DES CHARGES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4><p data-en="To be completed">À compléter</p></div>
-                <div><h4 class="font-mono text-[10px] uppercase text-[#5c78b0]" data-en="— RESULT">— RÉSULTAT</h4><p data-en="To be completed">À compléter</p></div>
-              </div>
-            </div>
-          </article>
-
-        </div>
-        <div id="show-more-projects-container" class="pt-2 text-center">
-          <button id="show-more-projects" type="button" aria-expanded="false" class="interactive-button inline-flex items-center gap-2 rounded-xl border border-[#141417] bg-zinc-900 px-5 py-2.5 font-mono text-xs font-medium text-zinc-300 transition-all hover:border-zinc-700 hover:text-white">
-            <span id="show-more-projects-label" data-en="Show more projects">Voir plus de projets</span>
-            <span id="show-less-projects-label" data-en="Show fewer projects" hidden>Voir moins de projets</span>
-            <span id="show-projects-icon" aria-hidden="true">↓</span>
-          </button>
-        </div>
-
-      </div>
-
-    </section>
-
-    <section id="contact" class="scroll-mt-24 pt-6">
-      <div class="reveal-on-scroll border-b border-[#292a32] pb-5 mb-8">
-        <h2 class="editorial-headline text-2xl sm:text-3xl text-zinc-100">
-          <span data-en="Get in touch">Me Contacter</span>
-        </h2>
-      </div>
-
-      <div class="reveal-on-scroll mr-auto max-w-4xl pt-1 pb-8 sm:pt-2 sm:pb-12 text-left">
-        <p class="max-w-4xl text-base sm:text-lg text-zinc-300 leading-relaxed" data-en="I am open to opportunities in computer science and new challenges. Feel free to contact me here if you have an internship or work placement to offer, or simply have any questions.">
-          Je suis à l’écoute d’opportunités en informatique. Vous pouvez me contacter directement ici si vous avez une alternance ou un stage à me proposer, ou simplement des questions à me poser.
-        </p>
-
-        <div class="mt-5">
-          <p class="inline-flex items-center gap-2 break-all text-lg sm:text-xl font-medium text-zinc-100">
-            <svg class="h-4 w-4 shrink-0 text-[#5c78b0]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-            <span>rafaelpeeters33@gmail.com</span>
-          </p>
-        </div>
-
-        <p class="mt-2 inline-flex items-center gap-2 font-mono text-sm text-zinc-400">
-          <svg class="h-4 w-4 shrink-0 text-[#5c78b0]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-          </svg>
-          Bordeaux, France
-        </p>
-
-        <nav id="contact-links" class="mt-3 flex flex-wrap items-center justify-start gap-x-6 gap-y-3 font-mono text-xs" aria-label="Liens de contact">
-          <a href="https://github.com/rafaelpeeters" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-zinc-300 transition-colors hover:text-[#5c78b0]">
-            <svg class="h-4 w-4 text-[#5c78b0]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-            </svg>
-            GitHub
+<html lang="fr" class="smooth-scroll">
+  <head>
+    <!-- METADONNEES ET RESSOURCES -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafael Peeters — Portfolio</title>
+    <meta name="description" content="Portfolio d'ingénierie logicielle et systèmes." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="portfolio-body">
+
+    <!-- FOND -->
+    <div class="grid-overlay"></div>
+
+    <!-- EN-TETE / NAVIGATION PRINCIPALE -->
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="brand-lockup">
+          <a href="#about" class="brand-name">
+            rafaelpeeters
           </a>
-          <a href="https://linkedin.com/in/rafael-peeters" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-zinc-300 transition-colors hover:text-[#5c78b0]">
-            <svg class="h-4 w-4 text-[#5c78b0]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-            LinkedIn
-          </a>
-          <a href="images/cv.pdf" target="_blank" rel="noopener noreferrer" class="interactive-button inline-flex items-center gap-2 rounded-xl bg-zinc-100 px-5 py-2.5 font-mono text-xs font-semibold text-zinc-950 transition-all hover:bg-white">
-            <span data-en="View my CV">Consulter mon CV</span>
-            <span aria-hidden="true">↗</span>
-          </a>
+          <span class="brand-indicator"></span>
+          <span class="internship-notice" data-en="Computer Science Internship Search - September 2027">Recherche Alternance Informatique - Septembre 2027</span>
+        </div>
+
+        <nav class="site-navigation">
+          <a href="#about" class="site-navigation-link" data-en="About">À propos</a>
+          <a href="#projects" class="site-navigation-link" data-en="Projects">Projets</a>
+          <a href="#contact" class="site-navigation-link" data-en="Contact">Contact</a>
+          <div class="language-switcher" role="group" aria-label="Language">
+            <button id="language-fr" type="button" lang="fr" aria-label="Français" aria-pressed="true" class="interactive-button language-button language-option language-option-active">FR</button>
+            <button id="language-en" type="button" lang="en" aria-label="English" aria-pressed="false" class="interactive-button language-button language-option">EN</button>
+          </div>
         </nav>
       </div>
-    </section>
+    </header>
 
-  </main>
+    <!-- NAVIGATION DES SECTIONS -->
+    <nav id="section-index" class="section-index" aria-label="Navigation des sections">
+      <div class="section-index-nav">
+        <span class="section-index-progress" aria-hidden="true"></span>
+        <a href="#about" aria-current="location">
+          <span class="section-index-marker" aria-hidden="true"></span>
+          <span class="section-index-label" data-en="About">À propos</span>
+        </a>
+        <a href="#projects">
+          <span class="section-index-marker" aria-hidden="true"></span>
+          <span class="section-index-label" data-en="Projects">Projets</span>
+        </a>
+        <a href="#contact">
+          <span class="section-index-marker" aria-hidden="true"></span>
+          <span class="section-index-label" data-en="Contact">Contact</span>
+        </a>
+      </div>
+    </nav>
 
-  <footer class="border-t border-[#292a32] py-4">
-    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-6 font-mono text-sm text-zinc-400 sm:flex-row sm:items-start sm:justify-between">
-      <p>© 2026 Rafael Peeters</p>
-      <details class="text-left sm:text-right">
-        <summary class="cursor-pointer transition-colors hover:text-zinc-100">Mentions légales</summary>
-        <div class="mt-2 max-w-xl space-y-1 text-xs leading-relaxed text-zinc-500 sm:ml-auto">
-          <p>Site personnel, sans activité commerciale, édité par Rafael Peeters.</p>
-          <p>Hébergement : GitHub Pages, par GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis.</p>
+    <main class="page-enter page-layout">
+
+      <!-- A PROPOS / PROFIL -->
+      <section id="about" class="anchored-section">
+        <h1 class="reveal-on-scroll editorial-headline about-title">
+          Rafael Peeters
+        </h1>
+        <div class="reveal-on-scroll section-divider"></div>
+        <div class="about-layout">
+
+          <div class="about-profile">
+            <div class="reveal-on-scroll portrait-glow-wrapper about-portrait">
+              <div class="portrait-card about-portrait-card">
+                <img
+                  src="images/rafael.png"
+                  alt="Rafael Peeters"
+                  class="about-portrait-image"
+                />
+              </div>
+            </div>
+
+            <!-- INFORMATIONS DU PROFIL ET LIENS -->
+            <div class="profile-facts">
+              <div class="reveal-on-scroll profile-fact">
+                <span class="meta-label profile-fact-label" data-en="Currently">Actuellement</span>
+                <span class="profile-fact-value profile-fact-value-wide">
+                  <span data-en="Computer Science student">Étudiant en BUT Informatique</span>
+                </span>
+              </div>
+
+              <div class="reveal-on-scroll profile-fact">
+                <span class="meta-label profile-fact-label" data-en="Location">Localisation</span>
+                <span class="profile-fact-value">Bordeaux, France</span>
+              </div>
+
+              <div class="reveal-on-scroll profile-fact">
+                <span class="meta-label profile-fact-label">Github</span>
+                <a
+                  href="https://github.com/rafaelpeeters"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="profile-link project-hover-group"
+                >
+                  <span>github.com/rafaelpeeters</span>
+                  <span class="profile-link-icon">↗</span>
+                </a>
+              </div>
+
+              <div class="reveal-on-scroll profile-fact">
+                <span class="meta-label profile-fact-label">LinkedIn</span>
+                <a
+                  href="https://linkedin.com/in/rafael-peeters"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="profile-link project-hover-group"
+                >
+                  <span>linkedin.com/in/rafael-peeters</span>
+                  <span class="profile-link-icon">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEXTE DE PRESENTATION -->
+          <div class="about-copy">
+            <div class="about-biography">
+              <p class="reveal-on-scroll">
+                <span data-en="My name is Rafael, and I am a second-year Computer Science student in the international program at IUT de Bordeaux.">Je m'appelle Rafael, je suis étudiant en deuxième année de BUT Informatique (parcours international) à l'IUT de Bordeaux.</span>
+              </p>
+              <p class="reveal-on-scroll">
+                <span data-en="My experience spans the full technical lifecycle: software development, modern web interfaces, data design and management, as well as Linux systems and networks.">Mon profil touche à l'ensemble du cycle technique : développement logiciel, interfaces web modernes, conception et gestion de données, ainsi que les systèmes et réseaux sous Linux.</span>
+              </p>
+              <p class="reveal-on-scroll">
+                <span data-en="I have applied these skills to several hands-on projects, which you can explore in the Projects section below.">J'ai mis ces compétences en pratique sur différents projets concrets, dont vous pourrez trouver les détails dans la section « Mes Réalisations » ci-dessous.</span>
+              </p>
+              <p class="reveal-on-scroll about-goal">
+                <span data-en="I am looking for a work-study position starting in September 2027.">Je recherche une alternance pour la rentrée de septembre 2027.</span><br />
+                <span data-en="(3 weeks at the company / 1 week in training)">(rythme 3 semaines en entreprise / 1 semaine en formation)</span>
+              </p>
+            </div>
+
+            <!-- ACTIONS PRINCIPALES -->
+            <div class="about-actions">
+              <a href="#projects" class="interactive-button reveal-on-scroll action-button action-button-primary">
+                <span data-en="View projects">Voir les réalisations</span>
+                <span>↓</span>
+              </a>
+              <a href="#contact" class="interactive-button reveal-on-scroll action-button action-button-secondary">
+                <span data-en="Get in touch">Prendre contact</span>
+                <span>→</span>
+              </a>
+              <a href="images/cv.pdf" target="_blank" rel="noopener noreferrer" class="interactive-button reveal-on-scroll action-button action-button-secondary">
+                <span data-en="View my CV">Consulter mon CV</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+            <!-- COMPETENCES -->
+            <div class="skills-section">
+              <div class="reveal-on-scroll meta-label section-kicker skills-heading" data-en="// TECHNICAL SKILLS">// COMPÉTENCES TECHNIQUES</div>
+
+              <!-- DEVELOPPEMENT & BACK-END -->
+              <div class="skills-list">
+                <div class="reveal-on-scroll skill-row">
+                  <span class="skill-category">
+                    <span class="skill-category-rule" aria-hidden="true"></span>
+                    <span data-en="Development & Back-end">Développement & Back-end</span>
+                  </span>
+                  <div class="skill-tags">
+                    <span class="tech-tag skill-tag tech-tag-compact">Java</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">C</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">Python</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">C#</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">PHP (Symfony)</span>
+                  </div>
+                </div>
+
+                <!-- WEB & FRONT-END -->
+                <div class="reveal-on-scroll skill-row">
+                  <span class="skill-category">
+                    <span class="skill-category-rule" aria-hidden="true"></span>
+                    <span data-en="Web & Front-end">Web & Front-end</span>
+                  </span>
+                  <div class="skill-tags">
+                    <span class="tech-tag skill-tag tech-tag-compact">TypeScript (React)</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">JavaScript</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">CSS3</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">HTML5</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">Responsive Design</span>
+                  </div>
+                </div>
+
+                <!-- DONNÉES & MODÉLISATION -->
+                <div class="reveal-on-scroll skill-row">
+                  <span class="skill-category">
+                    <span class="skill-category-rule" aria-hidden="true"></span>
+                    <span data-en="Data & Modeling">Données & Modélisation</span>
+                  </span>
+                  <div class="skill-tags">
+                    <span class="tech-tag skill-tag tech-tag-compact">SQL Server</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">MySQL</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">Oracle</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">SQLAlchemy</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">UML</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">MCD</span>
+                  </div>
+                </div>
+
+                <!-- SYSTÈMES & RÉSEAUX -->
+                <div class="reveal-on-scroll skill-row">
+                  <span class="skill-category">
+                    <span class="skill-category-rule" aria-hidden="true"></span>
+                    <span data-en="Systems & Networks">Systèmes & Réseaux</span>
+                  </span>
+                  <div class="skill-tags">
+                    <span class="tech-tag skill-tag tech-tag-compact">Linux</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">Bash</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">HTTP/HTTPS</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">DNS</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">Routage</span>
+                  </div>
+                </div>
+
+                <!-- OUTILS & MÉTHODOLOGIES -->
+                <div class="reveal-on-scroll skill-row">
+                  <span class="skill-category">
+                    <span class="skill-category-rule" aria-hidden="true"></span>
+                    <span data-en="Tools & Methods">Outils & Méthodologies</span>
+                  </span>
+                  <div class="skill-tags">
+                    <span class="tech-tag skill-tag tech-tag-compact">Git</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">Docker</span>
+                    <span class="tech-tag skill-tag tech-tag-compact" data-en="Unit Testing">Tests Unitaires</span>
+                    <span class="tech-tag skill-tag tech-tag-compact" data-en="Scrum Methodology">Méthode Scrum</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">VS Code</span>
+                    <span class="tech-tag skill-tag tech-tag-compact">Visual Studio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
-      </details>
-    </div>
-  </footer>
+      </section>
 
-  <script src="script.js"></script>
-</body>
+      <!-- PROJETS -->
+      <section id="projects" class="projects-section">
+
+        <div class="reveal-on-scroll projects-section-heading">
+          <div>
+            <h2 class="editorial-headline projects-section-title" data-en="Projects">
+              Mes Réalisations
+            </h2>
+          </div>
+        </div>
+
+        <div class="projects-content">
+          <!-- PROJETS PHARES -->
+          <div class="featured-projects">
+            <div class="reveal-on-scroll meta-label section-kicker" data-en="// FEATURED PROJECTS">// Projets phares</div>
+
+            <!-- VISUALISATION DONNEES METEO -->
+            <article data-project-id="meteo" class="reveal-on-scroll featured-project project-hover-group">
+              <div class="featured-project-media bento-card">
+                <img src="images/projet-meteo.png" alt="Capture de l'application de visualisation des données météorologiques" data-alt-en="Screenshot of the weather data visualization application" class="project-image project-image-featured" loading="lazy" />
+              </div>
+
+              <div class="featured-project-content">
+                <div class="project-meta">
+                  <span>2026</span>
+                  <span>—</span>
+                  <span class="project-category">
+                    <span class="project-category-dot"></span>
+                    <span data-en="Application development">Développement d'application</span>
+                  </span>
+                </div>
+
+                <h3 class="project-title featured-project-title" data-en="Weather Data Visualization">Visualisation de Données Météorologiques</h3>
+                <p class="project-subtitle" data-en="Interactive C# application & relational database">Application interactive C# & base de données relationnelle</p>
+
+                <p class="project-description">
+                  <span data-en="Design of an interactive desktop application for intuitive browsing of open weather data from the Nouvelle-Aquitaine region. Persistent relational database storage, statistical analysis with Python, and a complete user-friendly interface.">Conception d'une application de bureau interactive permettant de naviguer intuitivement à travers les données météorologiques open data de la région Nouvelle-Aquitaine. Stockage persistant en base relationnelle, analyses statistiques couplées à Python et interface ergonomique complète.</span>
+                </p>
+
+                <div class="project-tags">
+                  <span class="tech-tag tech-tag-compact">C#</span>
+                  <span class="tech-tag tech-tag-compact">Python</span>
+                  <span class="tech-tag tech-tag-compact">SQL</span>
+                  <span class="tech-tag tech-tag-compact">UML</span>
+                  <span class="tech-tag tech-tag-compact">Visual Studio</span>
+                  <span class="tech-tag tech-tag-compact">Git</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- COLORATION DE GRAPHES -->
+          <article data-project-id="graphes" class="reveal-on-scroll featured-project project-hover-group">
+            <div class="featured-project-media bento-card">
+              <img src="images/projet-graphes.png" alt="Capture du projet de coloration de graphes planaires" data-alt-en="Screenshot of the planar graph coloring project" class="project-image project-image-featured" loading="lazy" />
+            </div>
+
+            <div class="featured-project-content">
+              <div class="project-meta">
+                <span>2025</span>
+                <span>—</span>
+                <span class="project-category">
+                  <span class="project-category-dot"></span>
+                  <span data-en="Graph visualization">Visualisation de graphes</span>
+                </span>
+              </div>
+
+              <h3 class="project-title featured-project-title" data-en="Planar Graph Coloring">Coloration de Graphes Planaires</h3>
+              <p class="project-subtitle" data-en="Data structures & optimization heuristics in Java">Structures de données & heuristiques d'optimisation en Java</p>
+
+              <p class="project-description">
+                <span data-en="Object-oriented development of data structures for large graphs and implementation of three optimization algorithms (Welsh–Powell, 5-coloring, and 6-coloring). Validated with a comprehensive JUnit test suite and complexity analysis.">Développement orienté objet de structures de données modélisant des graphes de grande taille et implémentation de trois algorithmes d'optimisation (Welsh & Powell, 5-coloration et 6-coloration). Validation par suite exhaustive de tests unitaires (JUnit) et dossier de calcul de complexité.</span>
+              </p>
+
+              <div class="project-tags">
+                <span class="tech-tag tech-tag-compact">Java</span>
+                <span class="tech-tag tech-tag-compact">JUnit</span>
+                <span class="tech-tag tech-tag-compact">Algorithmique</span>
+                <span class="tech-tag tech-tag-compact">UML</span>
+                <span class="tech-tag tech-tag-compact">NetBeans</span>
+                <span class="tech-tag tech-tag-compact">Git</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- SERVEUR NEXTCLOUD -->
+          <article data-project-id="nextcloud" class="reveal-on-scroll featured-project project-hover-group">
+            <div class="featured-project-media bento-card">
+              <img src="images/projet-nextcloud.png" alt="Capture de l'installation réseau et du serveur Nextcloud" data-alt-en="Screenshot of the network and Nextcloud server setup" class="project-image project-image-featured" loading="lazy" />
+            </div>
+
+            <div class="featured-project-content">
+              <div class="project-meta">
+                <span>2025</span>
+                <span>—</span>
+                <span class="project-category">
+                  <span class="project-category-dot"></span>
+                  <span data-en="Network services & Linux">Services réseaux & Linux</span>
+                </span>
+              </div>
+
+              <h3 class="project-title featured-project-title" data-en="Network Deployment & Nextcloud Server">Déploiement Réseau & Serveur Nextcloud</h3>
+              <p class="project-subtitle" data-en="Addressing, virtual routing, and security configuration on Debian">Configuration d'adressage, routage virtuel et sécurisation sous Debian</p>
+
+              <p class="project-description">
+                <span data-en="Configured IP addressing and routing for a virtual network emulated with NEmu on Debian Linux, hosting and securing a complete Nextcloud server. Wrote a full technical wiki and step-by-step tutorials in English on GitLab.">Configuration de l'adressage IP et du routage d'un réseau virtuel émulé sous Linux Debian avec l'outil NEmu pour y héberger et sécuriser un serveur cloud Nextcloud complet. Rédaction intégrale d'un wiki technique et de tutoriels pas-à-pas en anglais sur GitLab.</span>
+              </p>
+
+              <div class="project-tags">
+                <span class="tech-tag tech-tag-compact">Linux</span>
+                <span class="tech-tag tech-tag-compact">NEmu</span>
+                <span class="tech-tag tech-tag-compact">Debian</span>
+                <span class="tech-tag tech-tag-compact">Bash</span>
+                <span class="tech-tag tech-tag-compact">GitLab Wiki</span>
+                <span class="tech-tag tech-tag-compact">Nextcloud</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- AUTRES PROJETS -->
+        <div class="other-projects">
+          <div class="other-projects-header">
+            <div class="reveal-on-scroll meta-label section-kicker" data-en="// OTHER PROJECTS">// AUTRES RÉALISATIONS</div>
+          </div>
+
+          <!-- GRILLE DES PROJETS -->
+          <div id="projects-grid" class="projects-grid">
+
+            <article data-project-id="capteurs" class="reveal-on-scroll project-card project-hover-group">
+              <div class="project-card-media bento-card">
+                <img src="images/projet-capteurs.png" alt="Capture du projet d’analyse de données de capteurs" data-alt-en="Screenshot of the sensor data analysis project" class="project-image project-image-card" loading="lazy" />
+              </div>
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <h3 class="project-title project-card-title" data-en="Sensor Data Analysis">Analyse de Données de Capteurs</h3>
+                  <span class="project-year">2026</span>
+                </div>
+                <p class="project-subtitle" data-en="Development of a C sensor analyzer and summary generator">Réalisation d'un Analyseur de Mesures et générateur de Synthèse en C</p>
+                <div class="project-details">
+                  <div>
+                    <h4 class="project-detail-label" data-en="— SPECIFICATIONS">— SPÉCIFICATIONS</h4>
+                    <p data-en="Process a temperature history via a CLI, calculate descriptive statistics, display a terminal report, and export a CSV summary.">Traitement d'un historique de températures via CLI, calcul des statistiques descriptives, affichage d'un rapport terminal et exportation d'une synthèse CSV.</p>
+                  </div>
+                  <div>
+                    <h4 class="project-detail-label" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4>
+                    <div class="project-tags">
+                      <span class="tech-tag tech-tag-compact">C</span>
+                      <span class="tech-tag tech-tag-compact">Valgrind</span>
+                      <span class="tech-tag tech-tag-compact">Git</span>
+                      <span class="tech-tag tech-tag-compact">VS Code</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- LABYRINTHE -->
+            <article data-project-id="labyrinthe" class="reveal-on-scroll project-card project-hover-group">
+              <div class="project-card-media bento-card">
+                <img src="images/projet-labyrinthe.png" alt="Capture du jeu de labyrinthe 2D multi-niveaux en Java" data-alt-en="Screenshot of the multi-level 2D Java maze game" class="project-image project-image-card" loading="lazy" />
+              </div>
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <h3 class="project-title project-card-title" data-en="2D Maze Game">Jeu de Labyrinthe 2D</h3>
+                  <span class="project-year">2026</span>
+                </div>
+                <p class="project-subtitle" data-en="Development of a multi-level grid-based game with JavaFX">Développement d'un Jeu sur Grille multi-étages en JavaFX </p>
+                <div class="project-details">
+                  <div>
+                    <h4 class="project-detail-label" data-en="— SPECIFICATIONS">— SPÉCIFICATIONS</h4>
+                    <p data-en="Develop a multi-level 2D game with keyboard-controlled hero movement, autonomous monster AI, and localized lighting.">Développement d'un jeu 2D multi-étages avec navigation du héros via le clavier, IA autonomes pour les monstres et éclairage localisé.</p>
+                  </div>
+                  <div>
+                    <h4 class="project-detail-label" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4>
+                    <div class="project-tags">
+                      <span class="tech-tag tech-tag-compact">Java</span>
+                      <span class="tech-tag tech-tag-compact">JavaFX</span>
+                      <span class="tech-tag tech-tag-compact">JUnit</span>
+                      <span class="tech-tag tech-tag-compact">Netbeans</span>
+                      <span class="tech-tag tech-tag-compact">Git</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- PIXEL WAR -->
+            <article data-project-id="pixelwar" class="reveal-on-scroll project-card project-hover-group">
+              <div class="project-card-media bento-card">
+                <img src="images/projet-pixelwar.jpeg" alt="Capture du projet Guerre des Pixels" data-alt-en="Screenshot of the Pixel War project" class="project-image project-image-card" loading="lazy" />
+              </div>
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <h3 class="project-title project-card-title" data-en="Pixel War">Guerre des Pixels</h3>
+                  <span class="project-year">2026</span>
+                </div>
+                <p class="project-subtitle" data-en="Inter-IUT adaptation of r/place in JavaScript">Adaptation inter-IUT de r/place en JavaScript</p>
+                <div class="project-details">
+                  <div>
+                    <h4 class="project-detail-label" data-en="— SPECIFICATIONS">— SPÉCIFICATIONS</h4>
+                    <p data-en="Develop the client for a multiplayer game synchronizing 10,000 pixels, with UID authentication, factions, cooldowns, and REST API requests.">Développement du client d’un jeu multijoueur synchronisant 10 000 pixels, avec authentification UID, factions, cooldown et requêtes API REST.</p>
+                  </div>
+                  <div>
+                    <h4 class="project-detail-label" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4>
+                    <div class="project-tags">
+                      <span class="tech-tag tech-tag-compact">JavaScript</span>
+                      <span class="tech-tag tech-tag-compact">HTML5</span>
+                      <span class="tech-tag tech-tag-compact">CSS3</span>
+                      <span class="tech-tag tech-tag-compact">VS Code</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- BUTOPIA -->
+            <article data-project-id="butopia" class="reveal-on-scroll project-card project-hover-group">
+              <div class="project-card-media bento-card">
+                <img src="images/projet-butopia.png" alt="Capture du projet Les Mystères de Butopia" data-alt-en="Screenshot of The Mysteries of Butopia project" class="project-image project-image-card" loading="lazy" />
+              </div>
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <h3 class="project-title project-card-title" data-en="RPG Character Sheets">Fiches de Personnage RPG</h3>
+                  <span class="project-year">2026</span>
+                </div>
+                <p class="project-subtitle" data-en="Development of an interactive RPG application in C#">Développement d’une Application Interactive de RPG en C#</p>
+                <div class="project-details">
+                  <div>
+                    <h4 class="project-detail-label" data-en="— SPECIFICATIONS">— SPÉCIFICATIONS</h4>
+                    <p data-en="Develop an application for managing character sheets, including the creation and progression of diverse avatars through various challenges and training.">Réalisation d’une application de gestion de feuilles de personnages, comportant la création et la progression d'avatars variés via diverses épreuves et entraînements.</p>
+                  </div>
+                  <div>
+                    <h4 class="project-detail-label" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4>
+                    <div class="project-tags">
+                      <span class="tech-tag tech-tag-compact">C#</span>
+                      <span class="tech-tag tech-tag-compact">NUnit</span>
+                      <span class="tech-tag tech-tag-compact">UML</span>
+                      <span class="tech-tag tech-tag-compact">Visual Studio</span>
+                      <span class="tech-tag tech-tag-compact">Git</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </article>
+            
+            <!-- EDITEUR GRAPHES -->
+            <article data-project-id="graphdesigner" class="reveal-on-scroll project-card project-hover-group">
+              <div class="project-card-media bento-card">
+                <img src="images/projet-graphdesigner.png" alt="Capture de l’application d’édition de graphes" data-alt-en="Screenshot of the graph editing application" class="project-image project-image-card" loading="lazy" />
+              </div>
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <h3 class="project-title project-card-title" data-en="Graph Editor">Éditeur de Graphes</h3>
+                  <span class="project-year">2026</span>
+                </div>
+                <p class="project-subtitle" data-en="Development of an interactive graph editing application in C#">Réalisation d'une Application Interactive d'édition de Graphes en C#</p>
+                <div class="project-details">
+                  <div>
+                    <h4 class="project-detail-label" data-en="— SPECIFICATIONS">— SPÉCIFICATIONS</h4>
+                    <p data-en="Create an application for drawing and moving graph nodes of different colors and sizes, and edges, with zoom, scrolling, and undo/redo.">Création d'une application pour dessiner et déplacer des nœuds de couleurs et tailles différentes et arêtes de graphes, avec zoom, défilement et annuler-rétablir.</p>
+                  </div>
+                  <div>
+                    <h4 class="project-detail-label" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4>
+                    <div class="project-tags">
+                      <span class="tech-tag tech-tag-compact">C#</span>
+                      <span class="tech-tag tech-tag-compact">Visual Studio</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- BASE DE DONNÉES -->
+            <article data-project-id="bd" class="reveal-on-scroll project-card project-hover-group">
+              <div class="project-card-media bento-card">
+                <img src="images/projet-bd.png" alt="Capture du projet de base de données Musicalertes" data-alt-en="Screenshot of the Musicalertes database project" class="project-image project-image-card" loading="lazy" />
+              </div>
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <h3 class="project-title project-card-title" data-en="Complete Database">Base de Données Complète</h3>
+                  <span class="project-year">2025</span>
+                </div>
+
+                <p class="project-subtitle" data-en="Database modeling, creation, and population">Modélisation, Création et Remplissage d'une Base de Données</p>
+                <div class="project-details">
+                  <div>
+                    <h4 class="project-detail-label" data-en="— SPECIFICATIONS">— SPÉCIFICATIONS</h4>
+
+                    <p data-en="Design the database for a concert alert service as an entity-relationship model (MCD), then create and populate it with SQL scripts.">Conceptualisation de la base de données d'un service d'alertes de concerts sous forme d'un MCD, création et remplissage de la base avec des scripts SQL.</p>
+                  </div>
+                  <div>
+                    <h4 class="project-detail-label" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4>
+                    <div class="project-tags">
+                      <span class="tech-tag tech-tag-compact">SQL Server</span>
+                      <span class="tech-tag tech-tag-compact">Win'Design</span>
+                      <span class="tech-tag tech-tag-compact">MCD</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- SITE WEB -->
+            <article data-project-id="web" hidden class="reveal-on-scroll project-card project-hover-group">
+              <div class="project-card-media bento-card">
+                <img src="images/projet-web.png" alt="Capture du site Retro-PC Dépannage" data-alt-en="Screenshot of the Retro-PC Repair website" class="project-image project-image-card" loading="lazy" />
+              </div>
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <h3 class="project-title project-card-title" data-en="Refactored Website">Site Web Refactorisé</h3>
+                  <span class="project-year">2025</span>
+                </div>
+                <p class="project-subtitle" data-en="Complete restructuring and redesign of an outdated website">Restructuration Intégrale et Refonte d'un Site Web obsolète</p>
+                <div class="project-details">
+                  <div>
+                    <h4 class="project-detail-label" data-en="— SPECIFICATIONS">— SPÉCIFICATIONS</h4>
+                    <p data-en="Restructure the code of an outdated website, replacing obsolete practices with modern standards, and completely redesign its interface.">Restructuration du code d'un ancien site web en remplaçant les pratiques obsolètes par des standards modernes et refonte complète de l'interface.</p>
+                  </div>
+                  <div>
+                    <h4 class="project-detail-label" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4>
+                    <div class="project-tags">
+                      <span class="tech-tag tech-tag-compact">HTML5</span>
+                      <span class="tech-tag tech-tag-compact">CSS3</span>
+                      <span class="tech-tag tech-tag-compact">VS Code</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- BLOGUE -->
+            <article data-project-id="blogue" hidden class="reveal-on-scroll project-card project-hover-group">
+              <div class="project-card-media bento-card">
+                <img src="images/projet-blogue.png" alt="Capture du projet d’éditeur de blogue" data-alt-en="Screenshot of the blog editor project" class="project-image project-image-card" loading="lazy" />
+              </div>
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <h3 class="project-title project-card-title" data-en="Blog Editor">Moteur de Blogue Statique</h3>
+                  <span class="project-year">2025</span>
+                </div>
+                <p class="project-subtitle" data-en="Development of a Bash Markdown page editor with HTML/PDF export">Réalisation d'un éditeur de pages Markdown avec export en HTML/PDF en Bash</p>
+                <div class="project-details">
+                  <div>
+                    <h4 class="project-detail-label" data-en="— SPECIFICATIONS">— SPÉCIFICATIONS</h4>
+                    <p data-en="Develop a Bash script to manage Markdown pages and compile a static website with a dynamic index, exported to HTML and PDF.">Développement d'un script Bash pour gérer des pages Markdown et compiler un site statique avec index dynamique exporté en HTML et PDF.</p>
+                  </div>
+                  <div>
+                    <h4 class="project-detail-label" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4>
+                    <div class="project-tags">
+                      <span class="tech-tag tech-tag-compact">Linux</span>
+                      <span class="tech-tag tech-tag-compact">Bash</span>
+                      <span class="tech-tag tech-tag-compact">Shell</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- BIOSPHERE -->
+            <article data-project-id="biosphere" hidden class="reveal-on-scroll project-card project-hover-group">
+              <div class="project-card-media bento-card">
+                <img src="images/projet-biosphere.png" alt="Capture du projet de jeu de plateau et d’intelligence artificielle" data-alt-en="Screenshot of the board game and AI project" class="project-image project-image-card" loading="lazy" />
+              </div>
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <h3 class="project-title project-card-title" data-en="Turn-Based Board Game">Jeu de Plateau Tour par Tour</h3>
+                  <span class="project-year"> 2025</span>
+                </div>
+                <p class="project-subtitle" data-en="Development of a board game and AI agents that can play it in Java">Développement d'un Jeu de Plateau et d’IA’s pouvant y jouer en Java</p>
+                <div class="project-details">
+                  <div>
+                    <h4 class="project-detail-label" data-en="— SPECIFICATIONS">— SPÉCIFICATIONS</h4>
+
+                    <p data-en="Implement the logic of a turn-based strategy game and design autonomous AI agents capable of playing it effectively.">Implémentation de la logique d'un jeu de stratégie tour par tour et conception d'Intelligences Artificielles autonomes capables d'y jouer de façon optimale.</p>
+                  </div>
+                  <div>
+                    <h4 class="project-detail-label" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4>
+                    <div class="project-tags">
+                      <span class="tech-tag tech-tag-compact">Java</span>
+                      <span class="tech-tag tech-tag-compact">JUnit</span>
+                      <span class="tech-tag tech-tag-compact">NetBeans</span>
+                      <span class="tech-tag tech-tag-compact">Git</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </article>
+
+            <!-- VM CLOJURE -->
+            <article data-project-id="vm" hidden class="reveal-on-scroll project-card project-hover-group">
+              <div class="project-card-media bento-card">
+                <img src="images/projet-vm.png" alt="Capture du projet de machine virtuelle Debian" data-alt-en="Screenshot of the Debian virtual machine project" class="project-image project-image-card" loading="lazy" />
+              </div>
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <h3 class="project-title project-card-title" data-en="Debian Virtual Machine">Machine Virtuelle Debian</h3>
+                  <span class="project-year">2025</span>
+                </div>
+                <p class="project-subtitle" data-en="Configuration and deployment of a Linux virtual machine">Configuration et déploiement d'une Machine Virtuelle Linux</p>
+                <div class="project-details">
+                  <div>
+                    <h4 class="project-detail-label" data-en="— SPECIFICATIONS">— SPÉCIFICATIONS</h4>
+
+                    <p data-en="Design and configure a lightweight (under 8 GB), secure, and reproducible Linux virtual machine for team-based Clojure development in VS Code.">Conception et configuration d'une machine virtuelle Linux légère (< 8go), sécurisée et reproductible, dédiée au développement Clojure en équipe sur VS Code.</p>
+                  </div>
+                  <div>
+                    <h4 class="project-detail-label" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4>
+                    <div class="project-tags">
+                      <span class="tech-tag tech-tag-compact">Linux</span>
+                      <span class="tech-tag tech-tag-compact">Debian</span>
+                      <span class="tech-tag tech-tag-compact">XFCE</span>
+                      <span class="tech-tag tech-tag-compact">Bash</span>
+                      <span class="tech-tag tech-tag-compact">VMware </span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </article>
+            <!-- ODOMO -->
+            <article data-project-id="odomo" hidden class="reveal-on-scroll project-card project-hover-group">
+              <div class="project-card-media bento-card">
+                <img src="images/projet-odomo.png" alt="Capture du projet de station domotique" data-alt-en="Screenshot of the smart home station project" class="project-image project-image-card" loading="lazy" />
+              </div>
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <h3 class="project-title project-card-title" data-en="Home Automation Station Simulation">Simulation de Station Domotique</h3>
+                  <span class="project-year">2025</span>
+                </div>
+                <p class="project-subtitle" data-en="Implementation of a Java home automation weather station">Implémentation d'une Station Météo Domotique en Java</p>
+                <div class="project-details">
+                  <div>
+                    <h4 class="project-detail-label" data-en="— SPECIFICATIONS">— SPÉCIFICATIONS</h4>
+
+                    <p data-en="Build the logic for a home automation station that tracks temperature and weather history and controls heating, based on an existing codebase.">Construction de la logique d'une centrale domotique comprenant un historique des témpératures, de la météo et un chauffage, à partir d'une base de code existante. </p>
+                  </div>
+                  <div>
+                    <h4 class="project-detail-label" data-en="— TOOLS & METHODS">— OUTILS & MÉTHODES</h4>
+                    <div class="project-tags">
+                      <span class="tech-tag tech-tag-compact">Java</span>
+                      <span class="tech-tag tech-tag-compact">JUnit</span>
+                      <span class="tech-tag tech-tag-compact">NetBeans</span>
+                      <span class="tech-tag tech-tag-compact">Git</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </article>
+
+          </div>
+          <div id="show-more-projects-container" class="project-more-container">
+            <button id="show-more-projects" type="button" aria-expanded="false" class="interactive-button project-more-button">
+              <span id="show-more-projects-label" data-en="Show more projects">Voir plus de projets</span>
+              <span id="show-less-projects-label" data-en="Show fewer projects" hidden>Voir moins de projets</span>
+              <span id="show-projects-icon" aria-hidden="true">↓</span>
+            </button>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact-section">
+        <div class="reveal-on-scroll section-divider">
+          <h2 class="editorial-headline section-title">
+            <span data-en="Get in touch">Me Contacter</span>
+          </h2>
+        </div>
+
+        <div class="reveal-on-scroll contact-content">
+          <p class="contact-intro" data-en="I am open to opportunities in computer science and new challenges. Feel free to contact me here if you have an internship or work placement to offer, or simply have any questions.">
+            Je suis à l’écoute d’opportunités en informatique. Vous pouvez me contacter directement ici si vous avez une alternance ou un stage à me proposer, ou simplement des questions à me poser.
+          </p>
+
+          <!-- EMAIL ET LOCALISATION -->
+          <div class="contact-email-container">
+            <p class="contact-email">
+              <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <span>rafaelpeeters33@gmail.com</span>
+            </p>
+          </div>
+
+          <p class="contact-location">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Bordeaux, France
+          </p>
+
+          <!-- LIENS EXTERNES ET CV -->
+          <nav id="contact-links" class="contact-links" aria-label="Liens de contact">
+            <a href="https://github.com/rafaelpeeters" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <svg class="contact-link-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              GitHub
+            </a>
+            <a href="https://linkedin.com/in/rafael-peeters" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <svg class="contact-link-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+            <a href="images/cv.pdf" target="_blank" rel="noopener noreferrer" class="interactive-button cv-button">
+              <span data-en="View my CV">Consulter mon CV</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p>© 2026 Rafael Peeters</p>
+        <details class="legal-notice">
+          <summary class="legal-notice-toggle">Mentions légales</summary>
+          <div class="legal-notice-content">
+            <p>Site personnel, sans activité commerciale, édité par Rafael Peeters.</p>
+            <p>Hébergement : GitHub Pages, par GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis.</p>
+          </div>
+        </details>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
